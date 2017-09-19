@@ -10,85 +10,29 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+* {
+  box-sizing: border-box;
+}
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
 body {
-    background-color: #428dd7;
+    background-color: #fff;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.wrapper {
+  width: 1170px;
+  margin: auto;
 }
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
 
 
 
@@ -96,26 +40,74 @@ textarea {
    Helper classes
    ========================================================================== */
 
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
+.d-clear::after {
+    content: "";
+    width: 0;
+    height: 0;
+    clear: both;;
+    overflow: hidden;
+    display: block;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/* ==========================================================================
+   HEADER classes
+   ========================================================================== */
 
-.lines {
-    height: 800px;
-    background: url('../img/bg-top-lines.png') no-repeat center center;
-    position: relative;
 
+
+header {
+  background-color: #69b0f7;
+  border-bottom: 1px solid #fff;
+}
+header .wrapper {  
+  height: 107px;  
+}
+.header_logo {
+  width: 181px;
+  float: left;
+  margin-top: 39px;
+
+}
+.header_logo img {
+  width: 181px;
+  height: 34px;
+}
+header nav {
+  float: right;
+}
+header nav .header_menu {
+   list-style: none;
+   margin: 0 60px 0 0;
+   padding: 0;
+   float: left;
+}
+header nav .header_menu li {  
+  font: 17px/1 'Fira Sans', sans-serif;
+  float: left;
+  margin-right: 40px;
+  height: 107px;
+  padding-top: 50px;
+}
+header nav .header_menu li:last-child {
+  margin: 0;
+}
+header nav .header_menu li a {
+  color: #fff;
+
+}
+header nav .header_menu li.current {
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+}
+header .header_reg {
+  display: block;
+  width: 198px;
+  height: 54px;
+  border: 3px solid #fff;
+  text-align: center;
+  font: 17px/52px 'Fira Sans', sans-serif;
+  float: left;
+  margin-top: 29px;
+  color: #fff;
+  border-radius: 27px;
 }
