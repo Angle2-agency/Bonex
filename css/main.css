@@ -118,37 +118,65 @@ header .header_reg {
 }
 .frame-1 .chart-1 {
     height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 800px;
+    overflow: hidden;
+    transition: width 1500ms ease;
+}
+.frame-1 .chart-1::after {
+    content: "";
+    height: 800px;
     background:url('../img/frame_01_Chart_1.svg') no-repeat center -202px / 2560px auto;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 800px;
-    opacity: 0;
-    transition: opacity 1s linear;
+    width: 100vw;
+    height: 800px;    
 }
 .frame-1 .chart-2 {
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 800px;
+    overflow: hidden;
+    transition: width 1500ms ease 100ms;
+}
+.frame-1 .chart-2::after {
+    content: "";
     height: 800px;
     background:url('../img/frame_01_Chart_2.svg') no-repeat center -202px / 2560px auto;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 800px;
-    opacity: 0;
-    transition: opacity 1s linear 1s;
+    width: 100vw;
+    height: 800px;    
 }
 .frame-1 .chart-3 {
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 800px;
+    overflow: hidden;
+    transition: width 1500ms ease 200ms;
+}
+.frame-1 .chart-3::after {
+    content: "";
     height: 800px;
     background:url('../img/frame_01_Chart_3.svg') no-repeat center -202px / 2560px auto;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 800px;
-    opacity: 0;
-    transition: opacity 1s linear 2s;
+    width: 100vw;
+    height: 800px;    
 }
+
 .frame-1 .setka {
     height: 800px;    
     position: absolute;
@@ -168,7 +196,7 @@ header .header_reg {
     width: 0;
     height: 800px;
     overflow: hidden;
-    transition: width 3s ease;
+    transition: width 2s ease 600ms;
 }
 .frame-1 .lines .line-1 {
     position: absolute;
@@ -200,12 +228,12 @@ header .header_reg {
     border-radius: 50%;
     background-color: #fff;
     opacity: 0;
-    transition: opacity 1s linear 900ms;
+    transition: opacity 250ms linear 1200ms;
 }
 .frame-1 .marker-2 {
     position: absolute;
-    left: 1388px;
-    top: 232px;
+    left: 1390px;
+    top: 236px;
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -225,6 +253,11 @@ header .header_reg {
     position: absolute;
     top: -10px;
     left: -10px;
+    transform: scale(0);
+    transition: all 300ms linear 1250ms;
+}
+.frame-1 .marker-2::before {
+    transition: all 300ms linear 2250ms;
 }
 .frame-1 .marker-1::after,
 .frame-1 .marker-2::after {
@@ -238,6 +271,11 @@ header .header_reg {
     position: absolute;
     top: -38px;
     left: -38px;
+    transform: scale(0);
+    transition: all 300ms linear 1600ms;
+}
+.frame-1 .marker-2::after {
+    transition: all 300ms linear 2600ms; 
 }
 .frame-1 .marker-1 span,
 .frame-1 .marker-2 span {
@@ -254,7 +292,7 @@ header .header_reg {
     padding-top: 150px;
     opacity: 0;
     transform: translate3d(0, -50px, 0);
-    transition: all 900ms ease 1500ms;
+    transition: all 900ms ease 1800ms;
 }
 .frame-1_text-block h1 {
     margin: 0;

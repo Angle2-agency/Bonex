@@ -1,14 +1,24 @@
 
 .frame-1.animate .chart-1, .frame-1.animate .chart-2, .frame-1.animate .chart-3 {
-  opacity: 1;
+  width: 100%;
 }
+
 .frame-1.animate .lines {
   width: 100%;
 }
+
 .frame-1.animate .marker-1,
 .frame-1.animate .marker-2,
 .frame-1.animate .setka  {
   opacity: 1; 
+}
+.frame-1.animate .marker-1::before,
+.frame-1.animate .marker-2::before {
+	transform: scale(1);
+}
+.frame-1.animate .marker-1::after,
+.frame-1.animate .marker-2::after {
+	transform: scale(1);
 }
 .frame-1.animate .frame-1_text-block {
   opacity: 1;
