@@ -1,0 +1,23 @@
+
+.frame-1.animate .chart-1, .frame-1.animate .chart-2, .frame-1.animate .chart-3 {
+  opacity: 1;
+}
+.frame-1.animate .lines {
+  width: 100%;
+}
+.frame-1.animate .marker-1,
+.frame-1.animate .marker-2,
+.frame-1.animate .setka  {
+  opacity: 1; 
+}
+.frame-1.animate .frame-1_text-block {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.frame-1.animate .frame-1_phone {
+  opacity: 1;
+  transform: translate3d(0, 0, 0); 
+}
+.frame-1.animate .frame-1_phone::after {
+  transform: translate3d(0, 0, 0);  
+}
