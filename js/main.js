@@ -1,3 +1,4 @@
 $(document).ready(function() {
-	$('.frame-1').addClass('animate');	
+	$.scrollSpeed(100, 800);
+	$('.frame-1').addClass('animate');
 });
