@@ -1,4 +1,6 @@
-
+/* ==========================================================================
+   								FRAME - 1
+   ========================================================================== */
 .frame-1.animate .chart-1, .frame-1.animate .chart-2, .frame-1.animate .chart-3 {
   width: 100%;
 }
@@ -29,5 +31,20 @@
   transform: translate3d(0, 0, 0); 
 }
 .frame-1.animate .frame-1_phone::after {
-  transform: translate3d(0, 0, 0);  
+  	transform: translate3d(0, 0, 0);  
+}
+
+
+/* ==========================================================================
+   								FRAME - 2
+   ========================================================================== */
+.frame-2 .w1.animate {
+	opacity: 1;
+}
+.frame-2 .animate li {
+	opacity: 1!important;
+	transform: translate3d(0, 0, 0)!important;
+}
+.frame-2 .animate .frame-2_description_list {
+	transform: perspective(700px) rotateY(0deg);
 }
