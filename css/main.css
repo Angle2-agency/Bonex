@@ -358,7 +358,7 @@ header .header_reg {
     transition: all 250ms ease 2800ms;
 }
 .frame-2 {
-
+    padding-bottom: 62px;
 }
 .frame-2_title-block {
     width: 1008px;
@@ -507,4 +507,178 @@ header .header_reg {
     opacity: 0;
     transform: translate3d(0, 70px, 0);
     transition: all 1200ms ease; 
+}
+
+
+.frame-3 {
+    height: 946px;
+    background:url('../img/frame_03_bg.svg') no-repeat center bottom / 2560px auto;
+    position: relative;
+}
+.frame-3 .chart-1 {
+    background:url('../img/frame_03_Chart_1.svg') no-repeat center bottom / 2560px auto;   
+    position: absolute;
+    width: 100%;
+    height: 946px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.frame-3 .chart-2 {
+    background:url('../img/frame_03_Chart_2.svg') no-repeat center bottom / 2560px auto;   
+    position: absolute;
+    width: 100%;
+    height: 946px;
+    top: 0;
+    left: 0;
+}
+.frame-3 .chart-3 {
+    background:url('../img/frame_03_Chart_3.svg') no-repeat center bottom / 2560px auto;   
+    position: absolute;
+    width: 100%;
+    height: 946px;
+    top: 0;
+    left: 0;
+}
+.frame-3 .chart-4 {
+    background:url('../img/frame_03_Chart_4.svg') no-repeat center bottom / 2560px auto;   
+    position: absolute;
+    width: 100%;
+    height: 946px;
+    top: 0;
+    left: 0;
+}
+.frame-3 .line {
+    position: absolute;
+    width: 100%;
+    height: 946px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.frame-3 .line::before {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 946px;
+    background:url('../img/frame_03_line.svg') no-repeat center bottom / 2560px auto;   
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.frame-3 .wrapper {
+    padding-top: 171px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.frame-3_title {
+
+}
+.frame-3_title h2 {
+    margin: 0 0 21px 0;
+    padding: 0;
+    font: 500 60px/1 'Fira Sans', sans-serif;
+    color: #fff;
+}
+.frame-3_title-text {
+    font: 300 30px/1 'Fira Sans', sans-serif;
+    color: #fff;
+    opacity: 0.9;
+}
+.frame-3 .frame-3_step {    
+    position: absolute;
+    text-align: center;
+    width: 279px;
+    
+}
+.frame-3 .frame-3_step .bobble {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 60px;
+}
+.frame-3 .frame-3_step .bobble::before {
+    content: "";
+    display: block;
+    width: 47px;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+}
+.frame-3 .frame-3_step .bobble::after {
+    content: "";
+    display: block;
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.1;
+    position: absolute;
+    top: -48px;
+    left: -48px;
+}
+.frame-3 .frame-3_step .bobble_title {
+    font: 600 30px/1 'Fira Sans', sans-serif;
+    color: #fff;
+    margin-bottom: 67px;
+}
+.frame-3 .frame-3_step .bobble_title::before {    
+    display: block;
+    font: 600 120px/1 'Fira Sans Extra Condensed', sans-serif;
+    margin-bottom: -77px;
+    opacity: 0.13;
+}
+.frame-3 .frame-3_step .bobble_description {
+    font: 300 18px/28px 'Fira Sans', sans-serif;
+    color: #000;
+    margin-bottom: 22px;
+}
+.frame-3 .frame-3_step .registration {
+    font: 17px/55px 'Fira Sans', sans-serif;
+    color: #000;
+    text-decoration: none!important;
+    display: inline-block;
+    height: 55px;
+    white-space: nowrap;
+    background-color: #fdc50e;
+    border-radius: 27px;
+    padding: 0 50px;
+    color: #000;
+    box-shadow: 0 5px 15px 0 rgba(71, 108, 33, 0.3);
+}
+.frame-3 .frame-3_step.step-1 {
+    top: 516px;
+    left: 21px;   
+}
+.frame-3 .frame-3_step.step-1 .bobble_title::before {
+    content: "01";
+}
+.frame-3 .frame-3_step.step-2 {
+    top: 483px;
+    left: 296px;   
+}
+.frame-3 .frame-3_step.step-2 .bobble_title::before {
+    content: "02";
+}
+.frame-3 .frame-3_step.step-3 {
+    top: 428px;
+    left: 593px;   
+}
+.frame-3 .frame-3_step.step-3 .bobble_title::before {
+    content: "03";
+}
+.frame-3 .frame-3_step.step-4 {
+    top: 339px;
+    left: 889px;   
+}
+.frame-3 .frame-3_step.step-4 .bobble_title::before {
+    content: "04";
 }

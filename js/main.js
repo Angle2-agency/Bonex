@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$.scrollSpeed(100, 800);
+	//$.scrollSpeed(100, 800);
 	//$('.frame-1').addClass('animate');
 	//$('.frame-2 ul').addClass('animate');
 	frameStarts.init();
