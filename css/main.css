@@ -514,6 +514,7 @@ header .header_reg {
     height: 946px;
     background:url('../img/frame_03_bg.svg') no-repeat center bottom / 2560px auto;
     position: relative;
+    overflow: hidden;
 }
 .frame-3 .chart-1 {
     background:url('../img/frame_03_Chart_1.svg') no-repeat center bottom / 2560px auto;   
@@ -524,37 +525,68 @@ header .header_reg {
     left: 0;
     z-index: 1;
 }
-.frame-3 .chart-2 {
+.frame-3 .chart-2 {    
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;    
+    transition: all 800ms ease 1500ms;    
+}
+.frame-3 .chart-2::before {
+    content: "";
     background:url('../img/frame_03_Chart_2.svg') no-repeat center bottom / 2560px auto;   
-    position: absolute;
     width: 100%;
     height: 946px;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
 }
-.frame-3 .chart-3 {
+.frame-3 .chart-3 {    
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;    
+    transition: all 800ms ease 1700ms;
+}
+.frame-3 .chart-3::before {
+    content: "";
     background:url('../img/frame_03_Chart_3.svg') no-repeat center bottom / 2560px auto;   
-    position: absolute;
     width: 100%;
     height: 946px;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
 }
-.frame-3 .chart-4 {
-    background:url('../img/frame_03_Chart_4.svg') no-repeat center bottom / 2560px auto;   
+.frame-3 .chart-4 {    
     position: absolute;
     width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;    
+    transition: all 650ms ease 1900ms;    
+}
+.frame-3 .chart-4::before {
+    content: "";
+    background:url('../img/frame_03_Chart_4.svg') no-repeat center bottom / 2560px auto;   
+    width: 100%;
     height: 946px;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
 }
 .frame-3 .line {
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 946px;
     top: 0;
     left: 0;
     overflow: hidden;
+    transition: all 1200ms ease 2450ms;
 }
 .frame-3 .line::before {
     content: "";
@@ -573,8 +605,11 @@ header .header_reg {
     z-index: 1;
 }
 .frame-3_title {
-
+    transition: all 1000ms ease;
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
 }
+
 .frame-3_title h2 {
     margin: 0 0 21px 0;
     padding: 0;
@@ -600,6 +635,7 @@ header .header_reg {
     position: relative;
     margin: auto;
     margin-bottom: 60px;
+    transform: scale(0);
 }
 .frame-3 .frame-3_step .bobble::before {
     content: "";
@@ -611,7 +647,7 @@ header .header_reg {
     opacity: 0.3;
     position: absolute;
     top: -13px;
-    left: -13px;
+    left: -13px;        
 }
 .frame-3 .frame-3_step .bobble::after {
     content: "";
@@ -623,8 +659,41 @@ header .header_reg {
     opacity: 0.1;
     position: absolute;
     top: -48px;
-    left: -48px;
+    left: -48px;        
 }
+.frame-3 .frame-3_step.step-1 .bobble {
+  transition: all 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275);  
+}
+.frame-3 .frame-3_step.step-2 .bobble {
+  transition: all 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms;
+}
+.frame-3 .frame-3_step.step-3 .bobble {
+  transition: all 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 800ms;  
+}
+.frame-3 .frame-3_step.step-4 .bobble {
+  transition: all 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1200ms;
+}
+.frame-3 .frame-3_step.step-1 .step-animate {
+  opacity: 0;
+  transform: translate3d(0, 80px, 0);
+  transition: all 600ms ease 300ms;
+}
+.frame-3 .frame-3_step.step-2 .step-animate {
+  opacity: 0;
+  transform: translate3d(0, 80px, 0);
+  transition: all 700ms ease 650ms;
+}
+.frame-3 .frame-3_step.step-3 .step-animate {
+  opacity: 0;
+  transform: translate3d(0, 80px, 0);
+  transition: all 700ms ease 1000ms;
+}
+.frame-3 .frame-3_step.step-4 .step-animate {
+  opacity: 0;
+  transform: translate3d(0, 80px, 0);
+  transition: all 700ms ease 1350ms;
+}
+
 .frame-3 .frame-3_step .bobble_title {
     font: 600 30px/1 'Fira Sans', sans-serif;
     color: #fff;
@@ -655,30 +724,97 @@ header .header_reg {
     box-shadow: 0 5px 15px 0 rgba(71, 108, 33, 0.3);
 }
 .frame-3 .frame-3_step.step-1 {
-    top: 516px;
-    left: 21px;   
+  top: 516px;
+  left: 21px;   
 }
 .frame-3 .frame-3_step.step-1 .bobble_title::before {
-    content: "01";
+  content: "01";
 }
 .frame-3 .frame-3_step.step-2 {
-    top: 483px;
-    left: 296px;   
+  top: 483px;
+  left: 296px;   
 }
 .frame-3 .frame-3_step.step-2 .bobble_title::before {
-    content: "02";
+  content: "02";
 }
 .frame-3 .frame-3_step.step-3 {
-    top: 428px;
-    left: 593px;   
+  top: 428px;
+  left: 593px;   
 }
 .frame-3 .frame-3_step.step-3 .bobble_title::before {
-    content: "03";
+  content: "03";
 }
 .frame-3 .frame-3_step.step-4 {
-    top: 339px;
-    left: 889px;   
+  top: 339px;
+  left: 889px;   
 }
 .frame-3 .frame-3_step.step-4 .bobble_title::before {
-    content: "04";
+  content: "04";
+}
+.frame-4 {
+  height: 908px;
+  overflow: hidden;
+}
+.frame-4 .wrapper {
+  position: relative;  
+}
+.frame-4 .wrapper .bg {
+  width: 815px;
+  height: 816px;
+  background:url('../img/bg-frame-4.png') no-repeat center;   
+  position: absolute;
+  top: 47px;
+  left: 668px;
+  transition: all 1100ms ease;
+  opacity: 0;
+  transform: perspective(700px) rotateY(90deg);
+}
+.frame-4 .frame-4_animate {
+  transition: all 1000ms ease 600ms;
+  opacity: 0;
+  transform: translate3d(-110px, 0, 0);
+}
+.frame-4 .frame-4_title {
+  margin: 130px 0 70px 0;
+  padding: 0;
+  width: 525px;
+  font: 500 60px/70px 'Fira Sans', sans-serif;
+  color: #69b0f7;
+  opacity: 0.9;
+}
+.frame-4 .frame-4_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 590px;
+}
+.frame-4 .frame-4_list li {
+  font: 400 18px/28px 'Fira Sans', sans-serif;
+  color: #000;
+  padding-left: 99px;
+  position: relative;
+  margin-bottom: 44px;
+}
+.frame-4 .frame-4_list li::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #549be3;
+  position: absolute;
+  top: 15px;
+  left: 12px;  
+  border-radius: 50%;
+}
+.frame-4 .frame-4_list li::after {
+  content: "";
+  display: block;
+  width: 47px;
+  height: 47px;
+  background-color: #549be3;
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  border-radius: 50%;
+  opacity: 0.3;  
 }

@@ -48,3 +48,43 @@
 .frame-2 .animate .frame-2_description_list {
 	transform: perspective(700px) rotateY(0deg);
 }
+
+/* ==========================================================================
+   								FRAME - 2
+   ========================================================================== */
+
+.frame-3.animate .chart-2,
+.frame-3.animate .chart-3,
+.frame-3.animate .chart-4  {
+	height: 946px;
+}
+.frame-3.animate .line {
+	width: 100%;	
+}
+.frame-3.animate .frame-3_title {
+	opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.frame-3.animate .step-1 .bobble,
+.frame-3.animate .step-2 .bobble,
+.frame-3.animate .step-3 .bobble,
+.frame-3.animate .step-4 .bobble {
+	transform: scale(1);
+}
+.frame-3.animate .frame-3_step.step-1 .step-animate,
+.frame-3.animate .frame-3_step.step-2 .step-animate,
+.frame-3.animate .frame-3_step.step-3 .step-animate,
+.frame-3.animate .frame-3_step.step-4 .step-animate {
+	opacity: 1;
+  	transform: translate3d(0, 0, 0);
+}
+
+
+.frame-4.animate .wrapper .bg {
+	transform: perspective(700px) rotateY(0deg);
+	opacity: 1;
+}
+.frame-4.animate .frame-4_animate {
+	opacity: 1;
+	transform: translate3d(0, 0, 0); 
+}

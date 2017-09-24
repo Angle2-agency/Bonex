@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	//$.scrollSpeed(100, 800);
-	//$('.frame-1').addClass('animate');
+	//$.scrollSpeed(200, 700);
+	//$('.frame-3').addClass('animate');
 	//$('.frame-2 ul').addClass('animate');
 	frameStarts.init();
 	scroller();
@@ -14,12 +14,14 @@ $(document).ready(function() {
 var frameStarts = {
 	points : {},	
 	init : function(){
-		var h = $('body').height() / 3.5;
+		var h = 300;
 		frameStarts.points.frame1 = $('.frame-1').offset().top;
-		frameStarts.points.w1 = $('.frame-2 .w1').offset().top - h;
-		frameStarts.points.ul1 = $('.frame-2 .ul-1').offset().top - h;
-		frameStarts.points.ul2 = $('.frame-2 .ul-2').offset().top -h;
-		frameStarts.points.ul3 = $('.frame-2 .ul-3').offset().top -h;
+		frameStarts.points.w1 = $('.frame-2 .w1').offset().top - 500;
+		frameStarts.points.ul1 = $('.frame-2 .ul-1').offset().top - 600;
+		frameStarts.points.ul2 = $('.frame-2 .ul-2').offset().top -500;
+		frameStarts.points.ul3 = $('.frame-2 .ul-3').offset().top -500;
+		frameStarts.points.frame3 = $('.frame-3').offset().top -h;
+		frameStarts.points.frame4 = $('.frame-4').offset().top -h;
 	}
 }
 
@@ -40,5 +42,11 @@ function scroller(){
 	}
 	if(top >= frameStarts.points.ul3 && !$('.frame-2 .ul-3').hasClass('animate')){
 		$('.frame-2 .ul-3').addClass('animate');
+	}
+	if(top >= frameStarts.points.frame3 && !$('.frame-3').hasClass('animate')){
+		$('.frame-3').addClass('animate');
+	}
+	if(top >= frameStarts.points.frame4 && !$('.frame-4').hasClass('animate')){
+		$('.frame-4').addClass('animate');
 	}
 }
