@@ -752,7 +752,7 @@ header .header_reg {
   content: "04";
 }
 .frame-4 {
-  height: 908px;
+  height: 911px;
   overflow: hidden;
 }
 .frame-4 .wrapper {
@@ -763,7 +763,7 @@ header .header_reg {
   height: 816px;
   background:url('../img/bg-frame-4.png') no-repeat center;   
   position: absolute;
-  top: 47px;
+  top: -85px;
   left: 668px;
   transition: all 1100ms ease;
   opacity: 0;
@@ -817,4 +817,193 @@ header .header_reg {
   left: -2px;
   border-radius: 50%;
   opacity: 0.3;  
+}
+.frame-5 {
+
+}
+.frame-5 .frame-5_form-block {
+  height: 1025px;
+  background:url('../img/frame_05_bg.svg') no-repeat center top / 2560px auto;
+  position: relative;
+}
+.frame-5 .frame-5_form-block .chart-1 {    
+    position: absolute;
+    width: 100%;
+    height: 1025px;
+    top: 0;
+    left: 0;
+    overflow: hidden;    
+    transition: all 800ms ease 1500ms;
+}
+.frame-5 .frame-5_form-block .chart-1::before {
+    content: "";
+    background:url('../img/frame_05_Chart_1.svg') no-repeat center top / 2560px auto;   
+    width: 100%;
+    height: 1025px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.frame-5 .frame-5_form-block .chart-2 {    
+    position: absolute;
+    width: 100%;
+    height: 1025px;
+    top: 0;
+    left: 0;
+    overflow: hidden;    
+    transition: all 800ms ease 1500ms;
+}
+.frame-5 .frame-5_form-block .chart-2::before {
+    content: "";
+    background:url('../img/frame_05_Chart_2.svg') no-repeat center top / 2560px auto;   
+    width: 100%;
+    height: 1025px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.frame-5 .frame-5_form-block .wrapper {
+  padding-top: 145px;
+  position: relative;
+  z-index: 1;
+}
+.frame-5 .frame-5_form-block .form {
+  width: 576px;
+  height: 757px;  
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 55px 0 #2d73d7;
+  padding: 0 81px;
+  float: left;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 1000ms ease, opacity 1500ms linear;
+}
+.frame-5 .frame-5_form-block .form h2 {
+  padding: 60px 0 44px 0;
+  margin: 0;
+  font: 500 24px/1 'Fira Sans', sans-serif;
+  color: #000;
+  text-align: center;
+}
+.frame-5 .frame-5_form-block .form .input-block {
+  margin-bottom: 31px;
+}
+.frame-5 .frame-5_form-block .form .input-block label {
+  font: 300 17px/1 'Fira Sans', sans-serif;
+  color: #93939d;
+  display: block;
+  margin-bottom: 10px;
+}
+.frame-5 .frame-5_form-block .form .input-block input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #c7c7d1;
+  font: 20px/50px 'Fira Sans', sans-serif;
+  outline: none;
+  transition: all 400ms ease;
+}
+.frame-5 .frame-5_form-block .form .input-block input:focus {
+  border-bottom: 1px solid #000;
+}
+.frame-5 .frame-5_form-block .form .frame-5_checkbox {
+  padding-top: 7px;
+}
+/* Base for label styling */
+.frame-5_checkbox [type="checkbox"]:not(:checked),
+.frame-5_checkbox [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding: 3px 0 0 33px;
+  cursor: pointer;
+  font: 300 14px/1 'Fira Sans', sans-serif!important;
+  color: #000!important;
+}
+
+/* checkbox aspect */
+.frame-5_checkbox [type="checkbox"]:not(:checked) + label:before,
+.frame-5_checkbox [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 17px; height: 17px;
+  border: 1px solid #b7b7b7;
+  background: #fff;
+  border-radius: 2px;  
+}
+/* checked mark aspect */
+.frame-5_checkbox [type="checkbox"]:not(:checked) + label:after,
+.frame-5_checkbox [type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 1px; left: 3px;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #fdc50e;
+  transition: all 300ms;
+}
+/* checked mark aspect changes */
+.frame-5_checkbox [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.frame-5_checkbox [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+.frame-5_checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+.frame-5_checkbox [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+.frame-5_checkbox [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.frame-5_checkbox [type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+.frame-5 .form .submit {
+  text-align: center;
+  padding-top: 23px;
+}
+.frame-5 .form .submit button {
+  font: 17px/55px 'Fira Sans', sans-serif;
+  color: #000;
+  text-decoration: none!important;
+  display: inline-block;
+  height: 55px;
+  white-space: nowrap;
+  background-color: #fdc50e;
+  border-radius: 27px;
+  padding: 0 40px;
+  color: #000;
+  box-shadow: 0 5px 15px 0 rgba(71, 108, 33, 0.3);
+  border: none;
+  cursor: pointer;
+}
+.frame-5 .frame-5_text {
+  margin: 95px 0 0 635px;
+  background:url('../img/frame_05_icon_1.svg') no-repeat -11px -19px / 108px auto;   
+  height: 600px;
+  font: 300 36px/48px 'Fira Sans', sans-serif;
+  color: #000;
+  padding-top: 100px;
+  transition: all 1500ms ease 300ms;
+  transform: translate3d(0, 65px, 0);
+  opacity: 0;
+}
+.frame-5 .frame-5_text b {
+  color: #fff;
+  opacity: 0.9;
+}
+.frame-5 .frame-5_mac-block {
+  height: 800px;
 }
