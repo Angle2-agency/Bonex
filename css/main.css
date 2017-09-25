@@ -833,12 +833,13 @@ header .header_reg {
     top: 0;
     left: 0;
     overflow: hidden;    
-    transition: all 800ms ease 1500ms;
+    transition: all 1500ms ease 700ms;
+    opacity: 0;
 }
 .frame-5 .frame-5_form-block .chart-1::before {
     content: "";
     background:url('../img/frame_05_Chart_1.svg') no-repeat center top / 2560px auto;   
-    width: 100%;
+    width: 100vw;
     height: 1025px;
     position: absolute;
     bottom: 0;
@@ -849,18 +850,19 @@ header .header_reg {
     width: 100%;
     height: 1025px;
     top: 0;
-    left: 0;
+    right: 0;
     overflow: hidden;    
-    transition: all 800ms ease 1500ms;
+    transition: all 1500ms ease 700ms;
+    opacity: 0;
 }
 .frame-5 .frame-5_form-block .chart-2::before {
     content: "";
     background:url('../img/frame_05_Chart_2.svg') no-repeat center top / 2560px auto;   
-    width: 100%;
+    width: 100vw;
     height: 1025px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
 }
 .frame-5 .frame-5_form-block .wrapper {
   padding-top: 145px;
@@ -876,7 +878,7 @@ header .header_reg {
   padding: 0 81px;
   float: left;
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(1);
   transition: transform 1000ms ease, opacity 1500ms linear;
 }
 .frame-5 .frame-5_form-block .form h2 {

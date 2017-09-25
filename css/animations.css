@@ -96,3 +96,7 @@
 	transform: translate3d(0, 0, 0);
   	opacity: 1;
 }
+.frame-5_form-block.animate .chart-1,
+.frame-5_form-block.animate .chart-2 {
+	opacity: 1!important;
+}
