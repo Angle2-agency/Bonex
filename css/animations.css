@@ -100,3 +100,21 @@
 .frame-5_form-block.animate .chart-2 {
 	opacity: 1!important;
 }
+.frame-5 .frame-5_mac-block .frame-5_lines.animate {
+	width: 100%;
+}
+.frame-5 .frame-5_mac-block .wrapper .mac-text.animate {
+	transform: translate(0, 0px);
+  	opacity: 0.9;
+}
+.frame-5 .frame-5_mac-block .wrapper .macbook.animate {
+	transform: perspective(900px) rotateY(0deg);
+  	opacity: 1;
+}
+.frame-8.animate .form {
+	opacity: 1;
+}
+.frame-8.animate .frame-8_text {
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+}

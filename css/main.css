@@ -1012,5 +1012,199 @@ header .header_reg {
   opacity: 0.9;
 }
 .frame-5 .frame-5_mac-block {
-  height: 800px;
+  height: 1030px;
+  position: relative;
+}
+.frame-5 .frame-5_mac-block .frame-5_lines {
+  position: absolute;
+  width: 0;
+  height: 1030px;
+  top: 0;
+  left: 0;
+  overflow: hidden;    
+  transition: all 2300ms ease;  
+}
+.frame-5 .frame-5_mac-block .frame-5_lines::before {
+  content: "";
+  background:url('../img/frame_05_lines.svg') no-repeat center bottom / 2560px auto;   
+  width: 100vw;
+  height: 976px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.frame-5 .frame-5_mac-block .wrapper {
+  position: relative;
+}
+.frame-5 .frame-5_mac-block .wrapper .macbook {
+  width: 1268px;
+  height: 746px;
+  position: absolute;
+  background:url('../img/bg-macbook.png') no-repeat center center;   
+  top: 150px;
+  left: 468px;
+  transform: perspective(900px) rotateY(10deg);
+  opacity: 0;
+  transition: all 1400ms ease;
+}
+.frame-5 .frame-5_mac-block .wrapper .mac-text {
+  width: 400px;
+  padding-top: 307px;
+  background:url('../img/frame_05_icon_2.svg') no-repeat -16px 208px / 73px auto;  
+  font: 300 36px/48px 'Fira Sans', sans-serif;
+  color: #000;
+  transition: all 1000ms ease;
+  transform: translate(0, 50px);
+  opacity: 0;
+}
+.frame-5 .frame-5_mac-block .wrapper .mac-text b {
+  color: #4791dc;  
+  font-weight: 600;
+}
+.frame-6 {  
+  padding-bottom: 100px;
+}
+.frame-6 h2 {
+  margin: 0;
+  padding: 82px 0 72px 0;
+  font: 500 40px/1 'Fira Sans', sans-serif;
+  text-align: center;
+  color: #000;
+}
+.frame-6 .parnters {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: table;
+}
+.frame-6 .parnters li {
+  display: table-cell;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+.frame-6 .parnters li:nth-child(odd) {
+  width: 180px;
+  padding-right: 18px;
+  box-sizing: content-box;
+}
+.frame-6 .parnters li:nth-child(even) {
+  width: 279px;
+  padding-right: 18px;
+  box-sizing: content-box;
+}
+
+.frame-7 {
+  height: 472px;
+  background:url('../img/frame_07_bg.svg') no-repeat center top / 2560px auto;
+  position: relative;
+  padding-top: 90px;
+}
+.frame-7::before {
+  content: "";
+    background: url(../img/frame_07_Chart.svg) no-repeat center top / 2560px auto;
+    width: 100vw;
+    height: 472px;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.frame-7 .wrapper {
+  text-align: center;
+}
+.frame-7 .wrapper h2 {
+  font: 500 40px/1 'Fira Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 37px 0;
+  padding: 0;
+}
+.frame-7 .wrapper .timer {
+  display: table;
+  margin: auto;
+  width: auto;
+}
+.frame-8 {
+  height: 773px;
+  background-color: #dbe8f5;
+  margin-top: -73px;
+  padding-top: 73px;
+}
+.frame-8 .wrapper {
+
+}
+.frame-8 .frame-8_text {
+  width: 495px;
+  float: left;
+  font: 300 24px/30px 'Fira Sans', sans-serif;
+  color: #000;
+  padding-top: 180px;
+  transition: all 1500ms ease 300ms;
+  transform: translate3d(0, 65px, 0);
+  opacity: 0;
+}
+.frame-8 .frame-8_text a {
+    color: #4791dc;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.9;
+}
+.frame-8 .frame-8_text h2 {
+  font: 500 40px/48px 'Fira Sans', sans-serif;
+  color: #000;
+  margin: 0 0 19px 0;
+  padding: 0;
+}
+.frame-8 .form {
+  width: 575px;
+  height: 420px;  
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0 0 0 597px;
+  box-shadow: 0 5px 45px 0 rgba(140, 173, 208, 0.45);
+  padding: 60px 81px;  
+  opacity: 0;
+  transform: translate3d(0, 134px, 0);
+  transition: transform 1000ms ease, opacity 1500ms linear;
+}
+.frame-8 .form .input-block {
+  margin-bottom: 31px;
+}
+.frame-8 .form .input-block label {
+  font: 300 17px/1 'Fira Sans', sans-serif;
+  color: #93939d;
+  display: block;
+  margin-bottom: 10px;
+}
+.frame-8 .form .input-block input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #c7c7d1;
+  font: 20px/50px 'Fira Sans', sans-serif;
+  outline: none;
+  transition: all 400ms ease;
+}
+.frame-8 .form .input-block input:focus {
+  border-bottom: 1px solid #000;
+}
+.frame-8 .form .submit {
+  text-align: center;
+  padding-top: 23px;
+}
+.frame-8 .form .submit button {
+  font: 17px/55px 'Fira Sans', sans-serif;
+  color: #000;
+  text-decoration: none!important;
+  display: inline-block;
+  height: 55px;
+  white-space: nowrap;
+  background-color: #fdc50e;
+  border-radius: 27px;
+  padding: 0 58px;
+  color: #000;
+  box-shadow: 0 5px 15px 0 rgba(71, 108, 33, 0.3);
+  border: none;
+  cursor: pointer;
 }
