@@ -1,6 +1,10 @@
 var clock;
 $(document).ready(function() {
-	//$.scrollSpeed(200, 800);
+	setTimeout(function(){
+		$(document).scrollTop(0);
+		console.log('хуй');		
+	}, 50);	
+	$.scrollSpeed(200, 800);
 	//$('.frame-5 .frame-5_mac-block .frame-5_lines').addClass('animate');
 	//$('.frame-5 .frame-5_mac-block .wrapper .mac-text').addClass('animate');
 	//$('.frame-5 .frame-5_mac-block .wrapper .macbook').addClass('animate');
