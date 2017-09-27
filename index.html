@@ -31,15 +31,15 @@
                     <ul class="header_menu d-clear">
                         <li>
                             <a href="">О системе</a>
-                        </li>
-                        <li class="current">
-                            <a href="">Преимущества</a>
-                        </li>
-                        <li>
+                        </li>                        
+                        <li data-click="how-it-works">
                             <a href="">Как это работает?</a>
                         </li>
+                        <li class="current" data-click="benefits">
+                            <a href="">Преимущества</a>
+                        </li>
                     </ul>
-                    <a href="" class="header_reg">Регистрация</a>
+                    <a href="javascript:void(0)" data-click="registration" class="header_reg">Регистрация</a>
                 </nav>
             </div>
             </header>
@@ -65,7 +65,7 @@
                     <section class="frame-1_text-block">
                         <h1>Новые возможности для бизнеса – платформа для бесплатной работы с акциями, скидками и бонусами. </h1>
                         <div class="frame-1_description">Вы добавляете информацию об акциях, настраиваете показ по локациям и категориям, начисляете бонусы за покупки и собираете статистику активности клиентов.</div>
-                        <a href="" class="frame-1_registration">Предварительная регистрация</a>
+                        <a href="" data-click="registration" class="frame-1_registration">Предварительная регистрация</a>
                     </section>
                     <section class="frame-1_phone"></section>
                 </div>            
@@ -148,7 +148,7 @@
                         <div class="step-animate">
                             <div class="bobble_title">Регистрация</div>
                             <div class="bobble_description">Заполните короткую анкету.</div>
-                            <a href="" class="registration">Регистрация</a>
+                            <a href=""  data-click="registration" class="registration">Регистрация</a>
                         </div>                    
                     </div>
                     <div class="frame-3_step step-2">
@@ -192,29 +192,39 @@
             <article class="frame-5">
                 <section class="frame-5_form-block">
                     <div class="chart-1"></div>
-                    <div class="chart-2"></div>
+                    <div class="chart-2"></div>                    
                     <div class="wrapper d-clear">
+                        <div class="popup">
+                            <i class="close"></i>
+                            <div class="popup_table">
+                                <div class="popup_td">
+                                    <h2>Вы успешно зарегистрировались!</h2>
+                                    <div class="message">Наши менеджеры свяжутся с вами<br/> в ближайшее время.</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="popup_wrapper"></div>
                         <div class="form">
                             <h2>Предварительная регистрация</h2>
-                            <form action="">
+                            <form action="" id="frame-5-form">
                                 <div class="input-block">
                                     <label for="frame-5_input-1">Ваше имя</label>
                                     <input id="frame-5_input-1" type="text" name="name" autocomplete="off">
                                 </div>
                                 <div class="input-block">
                                     <label for="frame-5_input-2">Ваш e-mail</label>
-                                    <input id="frame-5_input-2" type="e-mail" name="name" autocomplete="off">
+                                    <input id="frame-5_input-2" type="e-mail" name="mail" autocomplete="off">
                                 </div>
                                 <div class="input-block">
                                     <label for="frame-5_input-3">Название компании</label>
-                                    <input id="frame-5_input-3" type="e-mail" name="name" autocomplete="off">
+                                    <input id="frame-5_input-3" type="e-mail" name="company" autocomplete="off">
                                 </div>
                                 <div class="input-block">
                                     <label for="frame-5_input-4">Сфера деятельности</label>
-                                    <input id="frame-5_input-4" type="e-mail" name="name" autocomplete="off">
+                                    <input id="frame-5_input-4" type="e-mail" name="activity" autocomplete="off">
                                 </div>
                                 <div class="input-block frame-5_checkbox">                                
-                                    <input id="frame-5_checkbox" type="checkbox" />
+                                    <input id="frame-5_checkbox" name="agreement" type="checkbox" />
                                     <label for="frame-5_checkbox">Я согласен разместить логотип на платформе</label>
                                 </div>
                                 <div class="submit">
@@ -293,7 +303,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>        
 
-        <script src="js/vendor/jQuery.scrollSpeed.js"></script>
+        <script src="js/vendor/jquery.nicescroll.min.js"></script>
         <script src="js/vendor/flipclock.min.js"></script>
         <script src="js/main.js"></script>
 
