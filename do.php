@@ -64,6 +64,21 @@ function doRegister()
 	if (count($errors['empty']) || count($errors['invalid'])) {
 		jsonResponse(['errors' => $errors], 'VALIDATION_FAILED', 'Data validation errors');
 	}
+	$sql = "INSERT INTO `registrations` (`name`, `email`, `company`, `activity`, `registered`) values (%s, %s, %s, %s, %s)";
+	$sql = sprintf($sql, 
+		$connection->quote($data['name']),
+		$connection->quote($data['email']),
+		$connection->quote($data['company']),
+		$connection->quote($data['activity']),
+		time()
+	);
+	try {
+		$connection->execute($sql);
+	} catch (PDOEcxeption $e) {
+		jsonResponse([], 'DB_FAILED', 'Internal server error');
+	}
+	
+	return jsonResponse();
 }
 
 $action = trim($_GET['action']);
