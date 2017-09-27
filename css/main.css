@@ -973,6 +973,12 @@ header .header_reg {
   outline: none;
   transition: all 400ms ease;
 }
+.frame-5 .frame-5_form-block .form .input-block.error input {
+  border-bottom: 1px solid #b20202!important;
+}
+.frame-5 .frame-5_form-block .form .input-block.error label {  
+  color: #b20202;  
+}
 .frame-5 .frame-5_form-block .form .input-block input:focus {
   border-bottom: 1px solid #000;
 }

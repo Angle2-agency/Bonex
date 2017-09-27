@@ -7,8 +7,8 @@ $(document).ready(function() {
 	}, 50);	
 	//$.scrollSpeed(200, 800);
 	$("body").niceScroll({
-		scrollspeed: 100,
-    	mousescrollstep: 80,
+		scrollspeed: 70,
+    	mousescrollstep: 100,
     	hwacceleration: true
 	});
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
 	$('#frame-5-form').submit(function(e){
 		$.ajax({
 		  type: "POST",
-		  url: "//207.154.196.145:1488/do.php?action=subscribe",
+		  url: "//207.154.196.145:1488/do.php?action=register",
 		  dataType : 'json',
 		  data: {
 		  	name : $('#frame-5-form input[name="name"]').val(),
@@ -64,15 +64,29 @@ $(document).ready(function() {
 		  	agreement : $('#frame-5-form input[name="agreement"]').is(':checked')
 		  },
 		  success: function(data){
-		  	if(data){
-
+		  	if(data.status == 'OK'){
+		  		$('.frame-5').addClass('submit');
+		  		$('.frame-5 .popup_wrapper, .frame-5 .popup').fadeIn(400);
+		  		$('#frame-5-form input').val('');
 		  	}
+		  	if(data.status == 'VALIDATION_FAILED'){
+		  		for(var i in data.data.errors){
+		  			$('#frame-5-form input[name="'+data.data.errors[i]+'"]').closest('.input-block').addClass('error');
+		  			
+		  		}
+		  	}
+
 		  	console.log(data);
 		  }
+		  	
 		});
 		console.log(e);
 		return false;
-	})
+	});
+	$('.popup_wrapper, .popup .close').click(function(){
+		$('.popup_wrapper, .popup').fadeOut(400);
+		$('article').removeClass('submit');
+	});
 });
 
 
