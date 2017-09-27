@@ -36,7 +36,6 @@ function cleanup($string)
 	return trim(filter_var($string, FILTER_SANITIZE_STRING));
 }
 
-$connection = null;//dbo_init($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['name']);
 
 function doRegister()
 {
@@ -81,15 +80,56 @@ function doRegister()
 	return jsonResponse();
 }
 
+function doSubscribe()
+{
+	global $connection;
+
+        $data = [
+                'name' => cleanup($_POST['name']),
+                'email' => cleanup($_POST['email']),
+        ];
+        $errors = [
+                'empty' => [],
+                'invalid' => [],
+        ];
+        foreach($data as $field => $value) {
+                if (empty($value)) {
+                        $errors['empty'][] = $field;
+                }
+        }
+        if (!empty($data['email']) && ($data['email'] !== filter_var($data['email'], FILTER_VALIDATE_EMAIL))) {
+                $errors['invalid'] = ['email'];
+        }
+        if (count($errors['empty']) || count($errors['invalid'])) {
+                jsonResponse(['errors' => $errors], 'VALIDATION_FAILED', 'Data validation errors');
+        }
+	$sql = "INSERT INTO `subscriptions` (`name`, `value`, `subscribed`) VALUES (%s, %s, %s)";
+	$sql = sprintf($sql,
+                $connection->quote($data['name']),
+                $connection->quote($data['email']),
+                time()
+        );
+        try {
+                $connection->execute($sql);
+        } catch (PDOEcxeption $e) {
+                jsonResponse([], 'DB_FAILED', 'Internal server error');
+        }	
+
+	return jsonResponse();	
+}
+
 $action = trim($_GET['action']);
 if (!in_array($action, $config['actions'])) {
 	jsonResponse([], 'INVALID_USAGE', 'Unsupported action type');
 }
+
+$connection = null;//dbo_init($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['name']);
 
 switch($action) {
 	case 'register':
 		doRegister();
 	break;
 	case 'subscribe':
+		doSubscribe();
 	break;
 }
