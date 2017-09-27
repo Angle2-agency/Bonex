@@ -5,12 +5,13 @@ $(document).ready(function() {
 		frameStarts.init();
 		scroller();
 	}, 50);	
-	//$.scrollSpeed(200, 800);
+	/*$.scrollSpeed(200, 800);
 	$("body").niceScroll({
 		scrollspeed: 70,
     	mousescrollstep: 100,
     	hwacceleration: true
 	});
+	*/
 
 	var startTime = (1515405600000 - new Date().getTime()) / 1000;
 	// Grab the current date
@@ -58,7 +59,7 @@ $(document).ready(function() {
 		  dataType : 'json',
 		  data: {
 		  	name : $('#frame-5-form input[name="name"]').val(),
-		  	email : $('#frame-5-form input[name="mail"]').val(),
+		  	email : $('#frame-5-form input[name="email"]').val(),
 		  	company : $('#frame-5-form input[name="company"]').val(),
 		  	activity : $('#frame-5-form input[name="activity"]').val(),
 		  	agreement : $('#frame-5-form input[name="agreement"]').is(':checked')
@@ -70,9 +71,8 @@ $(document).ready(function() {
 		  		$('#frame-5-form input').val('');
 		  	}
 		  	if(data.status == 'VALIDATION_FAILED'){
-		  		for(var i in data.data.errors){
-		  			$('#frame-5-form input[name="'+data.data.errors[i]+'"]').closest('.input-block').addClass('error');
-		  			
+		  		for(var i in data.data.errors.empty){
+		  			$('#frame-5-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
 		  		}
 		  	}
 
