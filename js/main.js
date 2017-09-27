@@ -1,39 +1,30 @@
 var clock;
-$(document).ready(function() {
-	setTimeout(function(){
-		$(document).scrollTop(0);
-		console.log('хуй');		
+$(document).ready(function() {	
+	setTimeout(function(){		
+		$(document).scrollTop(0);		
+		frameStarts.init();
+		scroller();
 	}, 50);	
 	$.scrollSpeed(200, 800);
-	//$('.frame-5 .frame-5_mac-block .frame-5_lines').addClass('animate');
-	//$('.frame-5 .frame-5_mac-block .wrapper .mac-text').addClass('animate');
-	//$('.frame-5 .frame-5_mac-block .wrapper .macbook').addClass('animate');
 	
-	
-	//$('.frame-2 ul').addClass('animate');
-
-
 	clock = $('#timer').FlipClock({
-		        clockFace: 'DailyCounter',
-		        autoStart: false,
-		        language : 'ru',
-		        //showSeconds: false,
-		        callbacks: {
-		        	stop: function() {
-		        		$('.message').html('The clock has stopped!')
-		        	}
-		        }
-		    });
-				    
-		    clock.setTime(220880);
-		    clock.setCountdown(true);
-		    clock.start();
-	frameStarts.init();
-	scroller();
+        clockFace: 'DailyCounter',
+        autoStart: false,
+        language : 'ru',
+        //showSeconds: false,
+        callbacks: {
+        	stop: function() {
+        		$('.message').html('The clock has stopped!')
+        	}
+        }
+    });
+		    
+    clock.setTime(220880);
+    clock.setCountdown(true);
+    clock.start();	
 	$(document).scroll(function(e){
 		scroller();		
-	});
-	console.log(frameStarts.points);
+	});	
 });
 
 
@@ -51,14 +42,13 @@ var frameStarts = {
 		frameStarts.points.frame5Form = $('.frame-5 .frame-5_form-block').offset().top - 300;
 		frameStarts.points.frame5macText = $('.frame-5 .frame-5_mac-block .wrapper .mac-text').offset().top - 500;
 		frameStarts.points.frame5macLines = $('.frame-5 .frame-5_mac-block .frame-5_lines').offset().top - 250;
-		frameStarts.points.frame8 = $('.frame-8').offset().top - 300;		
+		frameStarts.points.frame8 = $('.frame-8').offset().top - 400;		
 	}
 		
 }
 
 function scroller(){
-	var top = $(document).scrollTop();
-	console.log(top >= frameStarts.points.w1);
+	var top = $(document).scrollTop();	
 	if(top >= 0 && !$('.frame-1').hasClass('animate')){
 		$('.frame-1').addClass('animate')
 	}

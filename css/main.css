@@ -1208,3 +1208,52 @@ header .header_reg {
   border: none;
   cursor: pointer;
 }
+footer {
+    height: 316px;
+    background-color: #69b0f7;
+    padding-top: 77px;
+}
+footer .wrapper {
+    
+}
+footer .wrapper .left {
+    width: 500px;
+    float: left;
+}
+footer .wrapper .left {
+    padding-top: 56px;
+    font: 300 22px/36px 'Fira Sans', sans-serif;
+    color: #fff;
+    background: url(../img/header-logo.png) no-repeat 0 0 / 180px auto;    
+}
+footer .wrapper .left a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .wrapper .right {
+    float: right;
+}
+footer .wrapper .right .tw {
+    width: 34px;
+    height: 34px;
+    display: block;
+    float: right;
+    background: url(../img/footer-tw.png) no-repeat 0 0;
+    margin-left: 28px;
+}
+footer .wrapper .right .in {
+    width: 34px;
+    height: 34px;
+    display: block;
+    float: right;
+    background: url(../img/footer-in.png) no-repeat 0 0;
+    margin-left: 28px;
+}
+footer .wrapper .right .fb {
+    width: 34px;
+    height: 34px;
+    display: block;
+    float: right;
+    background: url(../img/footer-fb.png) no-repeat 0 0;
+    margin-left: 28px;
+}
