@@ -212,6 +212,14 @@
   color: #fff;
  }
 
+
+
+.flip-clock-divider.days .flip-clock-label {
+  right: -200px;
+   }
+.flip-clock-divider.hours .flip-clock-label {
+  right: -155px;
+   }
 .flip-clock-divider.minutes .flip-clock-label {
   right: -155px; }
 

@@ -6,22 +6,25 @@ $(document).ready(function() {
 		scroller();
 	}, 50);	
 	$.scrollSpeed(200, 800);
+
+	var startTime = (1515405600000 - new Date().getTime()) / 1000;
+	// Grab the current date
+	var currentDate = new Date();
+
+	// Set some date in the past. In this case, it's always been since Jan 1
+	var pastDate  = new Date(currentDate.getFullYear(), 0, 1);
+
+	// Calculate the difference in seconds between the future and current date
+	var diff = currentDate.getTime() / 1000 - pastDate.getTime() / 1000;
+
+	// Instantiate a coutdown FlipClock
+	clock = $('#timer').FlipClock(startTime, {
+		clockFace: 'DailyCounter',
+		language : 'ru',
+		showSeconds: false,
+		countdown : true		
+	});
 	
-	clock = $('#timer').FlipClock({
-        clockFace: 'DailyCounter',
-        autoStart: false,
-        language : 'ru',
-        //showSeconds: false,
-        callbacks: {
-        	stop: function() {
-        		$('.message').html('The clock has stopped!')
-        	}
-        }
-    });
-		    
-    clock.setTime(220880);
-    clock.setCountdown(true);
-    clock.start();	
 	$(document).scroll(function(e){
 		scroller();		
 	});	
