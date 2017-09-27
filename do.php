@@ -2,8 +2,8 @@
 $config = [
 	'db' => [
 		'host' => 'localhost',
-		'user' => 'root',
-		'password' => '',
+		'user' => 'bonex_user',
+		'password' => '8tuJBcTkF9aU',
 		'name' => 'bonex'
 	],
 	'actions' => ['register', 'subscribe'],
@@ -17,7 +17,7 @@ function dbo_init($host, $user, $password, $dbname)
 	try {
 		$connection = new PDO($dsn, $user, $password);
 	} catch (PDOException $e) {
-		return jsonResponse([], 'DB_CONNECT_FAIL', 'Internal server error');
+		return jsonResponse([], 'DB_CONNECT_FAIL', 'Internal server error ' . $e->getMessage());
 	}
 	return $connection;
 }
@@ -72,8 +72,9 @@ function doRegister()
 		time()
 	);
 	try {
-		$connection->execute($sql);
-	} catch (PDOEcxeption $e) {
+		$stm = $connection->prepare($sql);
+		$stm->execute();
+	} catch (PDOException $e) {
 		jsonResponse([], 'DB_FAILED', 'Internal server error');
 	}
 	
@@ -103,15 +104,16 @@ function doSubscribe()
         if (count($errors['empty']) || count($errors['invalid'])) {
                 jsonResponse(['errors' => $errors], 'VALIDATION_FAILED', 'Data validation errors');
         }
-	$sql = "INSERT INTO `subscriptions` (`name`, `value`, `subscribed`) VALUES (%s, %s, %s)";
+	$sql = "INSERT INTO `subscriptions` (`name`, `email`, `subscribed`) VALUES (%s, %s, %s)";
 	$sql = sprintf($sql,
                 $connection->quote($data['name']),
                 $connection->quote($data['email']),
                 time()
         );
         try {
-                $connection->execute($sql);
-        } catch (PDOEcxeption $e) {
+		$stm = $connection->prepare($sql);
+                $stm->execute();
+        } catch (PDOException $e) {
                 jsonResponse([], 'DB_FAILED', 'Internal server error');
         }	
 
@@ -123,7 +125,7 @@ if (!in_array($action, $config['actions'])) {
 	jsonResponse([], 'INVALID_USAGE', 'Unsupported action type');
 }
 
-$connection = null;//dbo_init($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['name']);
+$connection = dbo_init($config['db']['host'], $config['db']['user'], $config['db']['password'], $config['db']['name']);
 
 switch($action) {
 	case 'register':
