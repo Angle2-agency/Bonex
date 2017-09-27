@@ -54,7 +54,8 @@ $(document).ready(function() {
 	$('#frame-5-form').submit(function(e){
 		$.ajax({
 		  type: "POST",
-		  url: "//207.154.196.145:1489/do.php?action=subscribe",
+		  url: "//207.154.196.145:1488/do.php?action=subscribe",
+		  dataType : 'json',
 		  data: {
 		  	name : $('#frame-5-form input[name="name"]').val(),
 		  	email : $('#frame-5-form input[name="mail"]').val(),
@@ -63,6 +64,9 @@ $(document).ready(function() {
 		  	agreement : $('#frame-5-form input[name="agreement"]').is(':checked')
 		  },
 		  success: function(data){
+		  	if(data){
+
+		  	}
 		  	console.log(data);
 		  }
 		});
