@@ -237,6 +237,9 @@ svg:not(:root) {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+button {
+  outline: none;
+}
 button,
 input,
 optgroup,
