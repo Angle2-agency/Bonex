@@ -61,7 +61,7 @@ $(document).ready(function() {
 	$('#frame-5-form').submit(function(e){
 		$.ajax({
 		  type: "POST",
-		  url: "//207.154.196.145:1488/do.php?action=register",
+		  url: "do.php?action=register",
 		  dataType : 'json',
 		  data: {
 		  	name : $('#frame-5-form input[name="name"]').val(),
@@ -100,7 +100,7 @@ $(document).ready(function() {
 	$('#frame-8-form').submit(function(e){
 		$.ajax({
 		  type: "POST",
-		  url: "//207.154.196.145:1488/do.php?action=subscribe",
+		  url: "do.php?action=subscribe",
 		  dataType : 'json',
 		  data: {
 		  	name : $('#frame-8-form input[name="name"]').val(),
