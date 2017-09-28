@@ -90,7 +90,8 @@ $(document).ready(function() {
 		  			}		
 		  		}
 		  		
-		  	}		  	
+		  	}		
+		  	console.log(data);  	
 		  }
 		  	
 		});		
@@ -117,9 +118,10 @@ $(document).ready(function() {
 		  		for(var i in data.data.errors.empty){
 		  			$('#frame-8-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
 		  		}
-		  	}		  	
+		  	}
+		  	console.log(data);
 		  }		  	
-		});		
+		});				
 		return false;
 	});
 	$('.popup_wrapper, .popup .close').click(function(){
