@@ -1,11 +1,17 @@
 var clock;
 $(document).ready(function() {	
 	setTimeout(function(){		
-		$(document).scrollTop(0);		
+		//$(document).scrollTop(0);		
 		frameStarts.init();
 		scroller();
 	}, 50);	
-	$.scrollSpeed(200, 800);
+	/*$.scrollSpeed(200, 800);
+	$("body").niceScroll({
+		scrollspeed: 70,
+    	mousescrollstep: 100,
+    	hwacceleration: true
+	});
+	*/
 
 	var startTime = (1515405600000 - new Date().getTime()) / 1000;
 	// Grab the current date
@@ -27,7 +33,60 @@ $(document).ready(function() {
 	
 	$(document).scroll(function(e){
 		scroller();		
-	});	
+	});
+
+
+	$('[data-click="registration"]').click(function(){
+		var pos = $('.frame-5_form-block .form').offset().top;
+		$('html, body').animate({scrollTop:pos - 40}, 500);
+		return false;
+	});
+	$('[data-click="how-it-works"]').click(function(){
+		var pos = $('.frame-3').offset().top;
+		$('html, body').animate({scrollTop:pos + 40}, 500);
+		return false;
+	});
+	$('[data-click="benefits"]').click(function(){
+		var pos = $('.frame-4').offset().top;
+		$('html, body').animate({scrollTop:pos + 30}, 500);
+		return false;
+	});
+
+	$('#frame-5-form').submit(function(e){
+		$.ajax({
+		  type: "POST",
+		  url: "//207.154.196.145:1488/do.php?action=register",
+		  dataType : 'json',
+		  data: {
+		  	name : $('#frame-5-form input[name="name"]').val(),
+		  	email : $('#frame-5-form input[name="email"]').val(),
+		  	company : $('#frame-5-form input[name="company"]').val(),
+		  	activity : $('#frame-5-form input[name="activity"]').val(),
+		  	agreement : $('#frame-5-form input[name="agreement"]').is(':checked')
+		  },
+		  success: function(data){
+		  	if(data.status == 'OK'){
+		  		$('.frame-5').addClass('submit');
+		  		$('.frame-5 .popup_wrapper, .frame-5 .popup').fadeIn(400);
+		  		$('#frame-5-form input').val('');
+		  	}
+		  	if(data.status == 'VALIDATION_FAILED'){
+		  		for(var i in data.data.errors.empty){
+		  			$('#frame-5-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
+		  		}
+		  	}
+
+		  	console.log(data);
+		  }
+		  	
+		});
+		console.log(e);
+		return false;
+	});
+	$('.popup_wrapper, .popup .close').click(function(){
+		$('.popup_wrapper, .popup').fadeOut(400);
+		$('article').removeClass('submit');
+	});
 });
 
 
