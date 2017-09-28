@@ -5,13 +5,18 @@ $(document).ready(function() {
 		frameStarts.init();
 		scroller();
 	}, 50);	
-	/*$.scrollSpeed(200, 800);
+	/*
+	$.scrollSpeed(200, 800);
+	
 	$("body").niceScroll({
 		scrollspeed: 70,
     	mousescrollstep: 100,
-    	hwacceleration: true
+    	hwacceleration: true,
+    	smoothscroll: true
 	});
 	*/
+	//$(".body").smoothWheel();	
+	
 
 	var startTime = (1515405600000 - new Date().getTime()) / 1000;
 	// Grab the current date
@@ -28,7 +33,8 @@ $(document).ready(function() {
 		clockFace: 'DailyCounter',
 		language : 'ru',
 		showSeconds: false,
-		countdown : true		
+		countdown : true,
+		enabletranslate3d: true
 	});
 	
 	$(document).scroll(function(e){
