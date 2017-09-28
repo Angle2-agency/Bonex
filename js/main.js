@@ -115,8 +115,15 @@ $(document).ready(function() {
 		  	}
 		  	if(data.status == 'VALIDATION_FAILED'){
 		  		$('#frame-8-form .input-block').removeClass('error');
-		  		for(var i in data.data.errors.empty){
-		  			$('#frame-8-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
+		  		if(data.data.errors.empty.length){
+		  			for(var i in data.data.errors.empty){
+		  				$('#frame-8-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
+		  			}	
+		  		}
+		  		if(data.data.errors.invalid.length){
+		  			for(var i in data.data.errors.invalid){
+		  				$('#frame-8-form input[name="'+data.data.errors.invalid[i]+'"]').closest('.input-block').addClass('error');		  			
+		  			}		
 		  		}
 		  	}
 		  	console.log(data);
