@@ -78,17 +78,22 @@ $(document).ready(function() {
 		  		$('#frame-8-form .input-block').removeClass('error');
 		  	}
 		  	if(data.status == 'VALIDATION_FAILED'){
-		  		$('#frame-5-form .input-block').removeClass('error');
-		  		for(var i in data.data.errors.empty){
-		  			$('#frame-5-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
+		  		$('#frame-5-form .input-block').removeClass('error');		  		
+		  		if(data.data.errors.empty.length){
+		  			for(var i in data.data.errors.empty){
+		  				$('#frame-5-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
+		  			}	
 		  		}
-		  	}
-
-		  	console.log(data);
+		  		if(data.data.errors.invalid.length){
+		  			for(var i in data.data.errors.invalid){
+		  				$('#frame-5-form input[name="'+data.data.errors.invalid[i]+'"]').closest('.input-block').addClass('error');		  			
+		  			}		
+		  		}
+		  		
+		  	}		  	
 		  }
 		  	
-		});
-		console.log(e);
+		});		
 		return false;
 	});
 	$('#frame-8-form').submit(function(e){
@@ -112,13 +117,9 @@ $(document).ready(function() {
 		  		for(var i in data.data.errors.empty){
 		  			$('#frame-8-form input[name="'+data.data.errors.empty[i]+'"]').closest('.input-block').addClass('error');		  			
 		  		}
-		  	}
-
-		  	console.log(data);
-		  }
-		  	
-		});
-		console.log(e);
+		  	}		  	
+		  }		  	
+		});		
 		return false;
 	});
 	$('.popup_wrapper, .popup .close').click(function(){
