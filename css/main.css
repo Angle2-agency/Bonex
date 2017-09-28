@@ -880,7 +880,28 @@ header .header_reg {
   box-shadow: 0 5px 35px 0 rgba(45, 115, 215, 0.35);  
   z-index: 3;
   position: relative;
-  display: none;  
+  display: none;
+  margin-top: -16px;
+}
+.frame-5 .popup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:url('../img/frame_05_Chart_1.svg') no-repeat center -131px / 2560px auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.frame-5 .popup::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:url('../img/frame_05_Chart_2.svg') no-repeat center -131px / 2560px auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
 }
 .frame-5 .popup .close {
   width: 18px;
@@ -890,6 +911,7 @@ header .header_reg {
   top: 40px;
   right: 40px;
   cursor: pointer;
+  z-index: 5;
 }
 .frame-5 .popup .popup_table {
   display: table;
@@ -973,11 +995,11 @@ header .header_reg {
   outline: none;
   transition: all 400ms ease;
 }
-.frame-5 .frame-5_form-block .form .input-block.error input {
+.form .input-block.error input {
   border-bottom: 1px solid #b20202!important;
 }
-.frame-5 .frame-5_form-block .form .input-block.error label {  
-  color: #b20202;  
+.input-block.error label {  
+  color: #b20202!important;  
 }
 .frame-5 .frame-5_form-block .form .input-block input:focus {
   border-bottom: 1px solid #000;
@@ -1201,6 +1223,80 @@ header .header_reg {
 .frame-8 .wrapper {
 
 }
+.frame-8 .popup {
+  width: 100%;
+  height: 558px;  
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 35px 0 rgba(45, 115, 215, 0.35);  
+  z-index: 3;
+  position: relative;
+  display: none;
+  margin-top: 50px;
+}
+.frame-8 .popup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:url('../img/frame_05_Chart_1.svg') no-repeat center -131px / 2560px auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.frame-8 .popup::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:url('../img/frame_05_Chart_2.svg') no-repeat center -131px / 2560px auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.frame-8 .popup .close {
+  width: 18px;
+  height: 18px;
+  background: url('../img/popup-close.png') no-repeat center;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 5;
+}
+.frame-8 .popup .popup_table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.frame-8 .popup .popup_td {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.frame-8 .popup h2 {
+  padding: 0;
+  margin: 0 auto 40px auto;
+  font: 600 60px/70px 'Fira Sans', sans-serif;
+  color: #4a94e3;
+  width: 780px;
+}
+.frame-8 .popup .message {
+  font: 300 30px/40px 'Fira Sans', sans-serif;
+  color: #000;
+  width: 780px; 
+  margin: auto;
+}
+.frame-8 .popup_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(1, 46, 96, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;  
+}
 .frame-8 .frame-8_text {
   width: 495px;
   float: left;
@@ -1210,6 +1306,10 @@ header .header_reg {
   transition: all 1500ms ease 300ms;
   transform: translate3d(0, 65px, 0);
   opacity: 0;
+}
+.frame-8.submit .frame-8_text,
+.frame-8.submit .form {
+    display: none;
 }
 .frame-8 .frame-8_text a {
     color: #4791dc;
