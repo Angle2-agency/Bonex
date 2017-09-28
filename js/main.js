@@ -104,6 +104,7 @@ $(document).ready(function() {
 		  		$('.frame-8').addClass('submit');
 		  		$('.frame-8 .popup_wrapper, .frame-8 .popup').fadeIn(400);
 		  		$('#frame-8-form input').val('');
+		  		$('#frame-8-form .input-block').removeClass('error');
 		  	}
 		  	if(data.status == 'VALIDATION_FAILED'){
 		  		$('#frame-8-form .input-block').removeClass('error');
@@ -120,9 +121,10 @@ $(document).ready(function() {
 		return false;
 	});
 	$('.popup_wrapper, .popup .close').click(function(){
-		$('.popup_wrapper, .popup').fadeOut(400, function(){
+		$('.popup_wrapper, .popup').fadeOut(400);		
+		setTimeout(function(){
 			$('article').removeClass('submit');	
-		});		
+		}, 600)
 	});
 });
 
