@@ -75,6 +75,7 @@ $(document).ready(function() {
 		  		$('.frame-5').addClass('submit');
 		  		$('.frame-5 .popup_wrapper, .frame-5 .popup').fadeIn(400);
 		  		$('#frame-5-form input').val('');
+		  		$('#frame-8-form .input-block').removeClass('error');
 		  	}
 		  	if(data.status == 'VALIDATION_FAILED'){
 		  		$('#frame-5-form .input-block').removeClass('error');
