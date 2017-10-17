@@ -21,12 +21,13 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/animations.css">
-        <link rel="stylesheet" href="css/flipclock.css">
+        <link rel="stylesheet" href="css/flipclock.css">        
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/mq.css">
     </head>
     <body>      
         <div class="body-wrapper">
-            <header>
+            <header class="">
             <div class="wrapper d-clear">
                 <div class="header_logo">
                     <a href="">
@@ -35,18 +36,21 @@
                 </div>
                 <nav>
                     <ul class="header_menu d-clear">
-                        <li>
+                        <li class="current">
                             <a href="">О системе</a>
                         </li>                        
                         <li data-click="how-it-works">
                             <a href="">Как это работает?</a>
                         </li>
-                        <li class="current" data-click="benefits">
+                        <li data-click="benefits">
                             <a href="">Преимущества</a>
                         </li>
                     </ul>
                     <a href="javascript:void(0)" data-click="registration" class="header_reg">Регистрация</a>
                 </nav>
+                <div class="nav_but">
+                    <span></span>
+                </div>
             </div>
             </header>
             <article class="frame-1">   

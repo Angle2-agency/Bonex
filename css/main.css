@@ -71,7 +71,8 @@ header .wrapper {
   width: 181px;
   float: left;
   margin-top: 39px;
-
+  z-index: 2;
+  position: relative;
 }
 .header_logo img {
   width: 181px;
@@ -100,11 +101,49 @@ header nav .header_menu li:last-child {
 header nav .header_menu li a {
   color: #fff;
   text-decoration: none;
-
 }
-header nav .header_menu li:hover {
-  
+
+header nav .header_menu li:hover {  
   border-bottom: 3px solid #fff;
+}
+header .nav_but {
+    width: 27px;
+    height: 18px;
+    float: right;    
+    margin-top: 18px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    display: none;
+}
+header .nav_but::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    transition: transform 300ms ease;
+}
+header .nav_but::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    transition: transform 300ms ease;
+}
+header.show-nav .nav_but {
+    border: none;
+}
+header.show-nav .nav_but::before {
+    transform: rotate(45deg);
+}
+header.show-nav .nav_but::after {
+    transform: rotate(-45deg);
 }
 header .header_reg {
   display: block;

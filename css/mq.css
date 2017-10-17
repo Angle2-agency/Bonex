@@ -1,0 +1,201 @@
+
+.frame-3,
+.frame-4,
+.frame-5,
+.frame-6,
+.frame-7,
+.frame-8,
+footer {
+   display: none;
+}
+
+@media screen and (max-width: 480px) {
+   .body-wrapper {
+      min-width: 320px;
+   }
+   .wrapper {
+      min-width: 320px;
+      padding: 0 12px;      
+      width:  auto;      
+   }
+/* ==========================================================================
+                                   HEADER 
+   ========================================================================== */   
+   header .wrapper {
+      height: 54px;
+   }
+   header .wrapper .header_logo {      
+      width: auto;
+      height: 22px;
+      margin-top: 15px;
+   }
+   header .wrapper .header_logo img {      
+      height: 22px;
+      width: auto;
+   }
+   header nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-height: 0;
+      background-color: #69b0f7;      
+      transition: max-height 300ms ease;
+      overflow: hidden;
+   }
+   header nav::after {
+      content: "";
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      left: 0;
+      top: 55px;
+   }
+   header.show-nav .wrapper .header_logo {
+      
+   }
+   header.show-nav nav {      
+      max-height: 100%;
+   }
+   header nav .header_menu {
+      margin: 25vh 0 0 0;
+      float: none;
+      text-align: center;      
+   }
+   header nav .header_menu li {
+      float: none;
+      margin: 0 0 40px 0;
+      padding: 0;
+      height: auto;
+      font: 20px/1 'Fira Sans', sans-serif;
+   }
+   header nav .header_menu li.current a {      
+      border-bottom: 3px solid #fff;
+      display: inline-block;
+      padding-bottom: 15px;
+      font-weight: bold;
+   }
+   header .header_reg {
+      float: none;
+      margin: 25vh auto 0 auto;
+   }
+   header .nav_but {
+      display: block;
+   }
+   /* ==========================================================================
+                                   FRAME - 1 
+   ========================================================================== */   
+
+
+
+
+.frame-1 .marker-1,
+.frame-1 .marker-2 {
+   display: none;
+}
+
+
+
+   .frame-1 {
+      height: auto;
+      background: url(../img/frame_01_bg.svg) no-repeat center -180px / 2560px auto;
+   }
+   .frame-1_text-block {
+      width: auto;
+      padding-top: 50px;
+      text-align: center;
+      margin-bottom: 37px;
+   }
+   .frame-1_text-block h1 {
+      font: bold 20px/24px 'Fira Sans', sans-serif;
+   }
+   .frame-1_description {
+      width: auto;
+      font: 300 16px/22px 'Fira Sans', sans-serif;
+   }
+   .frame-1_registration {
+      width: auto;
+      height: 57px;      
+      text-align: center;
+      font: 17px/60px 'Fira Sans', sans-serif;
+   }
+   .frame-1_phone {
+      width: 166px;
+      height: 346px;
+      position: relative;
+      top: 0;
+      right: 70px;
+      margin: auto;
+      border-radius: 36px;
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translate3d(50px, 0, 0);
+      transition: all 300ms ease 2300ms;
+   }
+   .frame-1_phone::before {
+      content: "";
+      display: block;
+      width: 166px;
+      height: 346px;
+      background: url(../img/bg-phone.png) no-repeat center center / 166px auto;
+      border-radius: 36px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+   }
+   .frame-1_phone::after {
+      content: "";
+      display: block;
+      width: 142px;
+      height: 259px;
+      position: absolute;
+      top: 47px;
+      left: 166px;
+      right: auto;
+      background: url(../img/bg-phone-screen.png) no-repeat center center / 142px auto;
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.4);
+      transform: translate3d(-100%, 0, 0);
+      z-index: 1;
+      transition: all 250ms ease 2800ms;
+   }
+   .frame-1 .chart-1,
+   .frame-1 .chart-2,
+   .frame-1 .chart-3 {
+      height: 600px;
+   }
+   .frame-1 .chart-1::after {
+      height: 600px;
+      background: url(../img/frame_01_Chart_1.svg) no-repeat center -385px / 2560px auto;
+   }
+   .frame-1 .chart-2::after {
+      height: 600px;
+      background: url(../img/frame_01_Chart_2.svg) no-repeat center -385px / 2560px auto;
+   }
+   .frame-1 .chart-3::after {
+      height: 600px;
+      background: url(../img/frame_01_Chart_3.svg) no-repeat center -385px / 2560px auto;
+   }
+   .frame-1 .setka {
+      height: 600px;
+      background: url(../img/frame_01_setka.svg) no-repeat center -180px / 2560px auto;
+   }
+   .frame-1 .lines {
+      height: 600px;
+   }
+   .frame-1 .lines .line-1 {
+      height: 600px;
+      background: url(../img/frame_01_line_1.svg) no-repeat center -385px / 2560px auto;
+   }
+   .frame-1 .lines .line-2 {
+      height: 600px;
+      background: url(../img/frame_01_line_2.svg) no-repeat center -385px / 2560px auto;
+   }
+   .frame-1 .lines .line-3 {
+      height: 600px;
+      background: url(../img/frame_01_line_3.svg) no-repeat center -385px / 2560px auto;
+   }
+}

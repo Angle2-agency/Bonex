@@ -57,6 +57,10 @@ $(document).ready(function() {
 		$('html, body').animate({scrollTop:pos + 30}, 500);
 		return false;
 	});
+	$('header .nav_but').click(function(e){
+		console.log(e);
+		$('header').toggleClass('show-nav');
+	})
 
 	$('#frame-5-form').submit(function(e){
 		$.ajax({
