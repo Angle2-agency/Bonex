@@ -1,4 +1,4 @@
-.frame-4,
+@media screen and (max-width: 720px) {
 .frame-5,
 .frame-6,
 .frame-7,
@@ -7,7 +7,11 @@ footer {
    display: none;
 }
 
-@media screen and (max-width: 720px) {
+
+
+
+
+
    .body-wrapper {
       min-width: 320px;
    }
@@ -39,7 +43,7 @@ footer {
       height: 100%;
       max-height: 0;
       background-color: #69b0f7;      
-      transition: max-height 300ms ease;
+      transition: max-height 250ms ease;
       overflow: hidden;
    }
    header nav::after {
@@ -75,7 +79,7 @@ footer {
    }
    header nav .header_menu li {
       float: none;
-      margin: 0 0 40px 0;
+      margin: 0 0 6vh 0;
       padding: 0;
       height: auto;
       font: 20px/1 'Fira Sans', sans-serif;
@@ -88,7 +92,7 @@ footer {
    }
    header .header_reg {
       float: none;
-      margin: 25vh auto 0 auto;
+      margin: 15vh auto 0 auto;
    }
    header .nav_but {
       display: block;      
@@ -121,6 +125,7 @@ footer {
       padding-top: 50px;
       text-align: center;
       margin-bottom: 37px;
+      transition: all 700ms ease 1500ms;
    }
    .frame-1_text-block h1 {
       font: bold 20px/24px 'Fira Sans', sans-serif;
@@ -146,7 +151,7 @@ footer {
       box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.4);
       opacity: 0;
       transform: translate3d(50px, 0, 0);
-      transition: all 300ms ease 2300ms;
+      transition: all 300ms ease 1800ms;
    }
    .frame-1_phone::before {
       content: "";
@@ -173,7 +178,7 @@ footer {
       box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.4);
       transform: translate3d(-100%, 0, 0);
       z-index: 1;
-      transition: all 250ms ease 2800ms;
+      transition: all 250ms ease 2100ms;
    }
    .frame-1 .chart-1,
    .frame-1 .chart-2,
@@ -218,6 +223,7 @@ footer {
    .frame-2 {
       z-index: 1;
       position: relative;
+      padding-bottom: 0;
    }
    .frame-2_title-block {
       width: auto;
@@ -399,3 +405,60 @@ footer {
     left: 0;
 }
 
+
+/* ==========================================================================
+                                   FRAME - 4
+   ========================================================================== */ 
+.frame-4 {
+   height: auto;
+}
+.frame-4 .wrapper .bg {
+   display: none;
+}
+.frame-4 .frame-4_title {
+    margin: 45px 0 45px 0;    
+    width: auto;
+    font: 500 24px/30px 'Fira Sans', sans-serif;    
+    text-align: center;
+}
+.frame-4 .frame-4_list {    
+    width: auto;
+}
+.frame-4 .frame-4_list li {
+    font: 400 16px/24px 'Fira Sans', sans-serif;    
+    padding-left: 46px;    
+    margin-bottom: 40px;
+}
+.frame-4 .frame-4_list li::before {    
+    width: 13px;
+    height: 13px;    
+    top: 10px;
+    left: 6px;    
+}
+.frame-4 .frame-4_list li::after {    
+    width: 29px;
+    height: 29px;
+}
+
+
+
+
+/* ==========================================================================
+                                   ANIMATIONS
+   ========================================================================== */ 
+
+.frame-1 .chart-1 {    
+    transition: width 800ms ease;
+}
+.frame-1 .chart-2 {    
+    transition: width 800ms ease 100ms;
+}
+.frame-1 .chart-3 {    
+    transition: width 800ms ease 200ms;
+}
+.frame-1 .setka {    
+    transition: opacity 500ms ease;
+}
+.frame-1 .lines {    
+    transition: width 1s ease 600ms;
+}

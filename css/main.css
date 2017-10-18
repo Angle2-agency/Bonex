@@ -124,7 +124,7 @@ header .nav_but::before {
     position: absolute;
     left: 0;
     top: 6px;
-    transition: transform 300ms ease;
+    transition: transform 250ms ease;
 }
 header .nav_but::after {
     content: "";

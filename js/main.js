@@ -1,7 +1,7 @@
 var clock;
 $(document).ready(function() {	
 	setTimeout(function(){		
-		//$(document).scrollTop(0);		
+		$(document).scrollTop(0);
 		frameStarts.init();
 		scroller();
 	}, 50);	
@@ -58,8 +58,16 @@ $(document).ready(function() {
 		return false;
 	});
 	$('header .nav_but').click(function(e){
-		console.log(e);
 		$('header').toggleClass('show-nav');
+		if($('header').hasClass('show-nav')){
+			$('body').css({
+				width : '100%',
+				height : '100%',
+				overflow : 'hidden'
+			});
+		}else{
+			$('body').removeAttr('style');
+		}
 	})
 
 	$('#frame-5-form').submit(function(e){
