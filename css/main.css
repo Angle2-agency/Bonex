@@ -999,7 +999,7 @@ header .header_reg {
   border-radius: 16px;
   box-shadow: 0 5px 55px 0 #2d73d7;
   padding: 0 81px;
-  float: left;
+  
   opacity: 0;
   transform: scale(1);
   transition: transform 1000ms ease, opacity 1500ms linear;
@@ -1126,7 +1126,7 @@ header .header_reg {
   outline: none;
 }
 .frame-5 .frame-5_text {
-  margin: 95px 0 0 635px;
+  margin: 95px 0 0 0;
   background:url('../img/frame_05_icon_1.svg') no-repeat -11px -19px / 108px auto;   
   height: 600px;
   font: 300 36px/48px 'Fira Sans', sans-serif;
@@ -1135,6 +1135,8 @@ header .header_reg {
   transition: all 1500ms ease 300ms;
   transform: translate3d(0, 65px, 0);
   opacity: 0;
+  float: right;
+  width: 535px;
 }
 .frame-5 .frame-5_text b {
   color: #fff;
@@ -1211,6 +1213,9 @@ header .header_reg {
   height: 150px;
   text-align: center;
   vertical-align: middle;
+}
+.frame-6 .parnters li span {
+    display: none;
 }
 .frame-6 .parnters li:nth-child(odd) {
   width: 180px;

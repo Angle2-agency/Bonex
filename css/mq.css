@@ -1,17 +1,4 @@
 @media screen and (max-width: 720px) {
-.frame-5,
-.frame-6,
-.frame-7,
-.frame-8,
-footer {
-   display: none;
-}
-
-
-
-
-
-
    .body-wrapper {
       min-width: 320px;
    }
@@ -40,7 +27,7 @@ footer {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 110%;
       max-height: 0;
       background-color: #69b0f7;      
       transition: max-height 250ms ease;
@@ -69,7 +56,7 @@ footer {
       border: none;
    }
    header.show-nav nav {      
-      max-height: 100%;
+      max-height: 110%;
       z-index: 100;
    }
    header nav .header_menu {
@@ -442,6 +429,274 @@ footer {
 
 
 
+/* ==========================================================================
+                                   FRAME - 5
+   ========================================================================== */ 
+.frame-5 {
+
+}
+.frame-5 .chart-1,
+.frame-5 .chart-2 {
+   display: none;
+}
+.frame-5 .frame-5_form-block .wrapper {
+    padding-top: 0;    
+}
+.frame-5 .frame-5_form-block {
+    height: auto;
+    background: url(../img/frame_05_bg.svg) no-repeat 4% bottom / auto 100%;
+    padding: 100px 0;
+}
+.frame-5 .frame-5_text {    
+    background: url(../img/frame_05_icon_1.svg) no-repeat center 0 / 90px auto;
+    height: auto;
+    font: 300 20px/30px 'Fira Sans', sans-serif;    
+    padding-top: 90px;
+    margin: 0 0 50px 0;
+    float: none;
+    width: auto;
+    text-align: center;
+    transition: all 1000ms ease;
+}
+.frame-5 .frame-5_form-block .form {
+    width: auto;
+    height: auto;        
+    opacity: 0;    
+    transition: transform 1000ms ease, opacity 1500ms linear;
+    padding: 0 20px 50px 20px;
+}
+.frame-5 .frame-5_form-block .form h2 {
+    padding: 60px 0 34px 0;    
+}
+.frame-5 .frame-5_form-block .form .input-block {
+   margin-bottom: 10px;
+}
+.frame-5 .frame-5_form-block .form .input-block label {
+    font: 300 14px/1 'Fira Sans', sans-serif;    
+    margin-bottom: 8px;
+}
+.frame-5 .frame-5_form-block .form .input-block input {    
+    height: 40px;    
+    font: 17px/40px 'Fira Sans', sans-serif;    
+}
+[type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+    position: relative;
+    padding: 2px 0 0 25px;
+    cursor: pointer;
+    font: 300 11px/14px 'Fira Sans', sans-serif!important;
+    color: #000!important;
+}
+.frame-5_checkbox [type="checkbox"]:not(:checked) + label:before, .frame-5_checkbox [type="checkbox"]:checked + label:before {    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #b7b7b7;
+    background: #fff;
+    border-radius: 2px;
+}
+.frame-5 .frame-5_mac-block {
+   padding-top: 50px;
+   height: auto;   
+}
+.frame-5 .frame-5_mac-block .wrapper .mac-text {
+    width: auto;
+    padding-top: 70px;
+    background: url(../img/frame_05_icon_2.svg) no-repeat center top / 73px auto;
+    font: 300 20px/30px 'Fira Sans', sans-serif;    
+    transition: all 1000ms ease;
+    transform: translate(0, 50px);
+    opacity: 0;
+}
+.frame-5 .frame-5_mac-block .frame-5_lines {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    bottom: 0;
+    top: auto;
+    left: 0;    
+    transition: all 1500ms ease;
+}
+.frame-5 .frame-5_mac-block .frame-5_lines::before {    
+    background: url(../img/frame_05_lines.svg) no-repeat center bottom / auto 100%;
+    width: 100vw;
+    height: 220px;    
+}
+.frame-5 .frame-5_mac-block .wrapper {
+   padding-bottom: 380px;
+}
+.frame-5 .frame-5_mac-block .wrapper .macbook {
+    width: 570px;
+    height: 335px;    
+    background: url(../img/bg-macbook.png) no-repeat center center / 570px auto;
+    top: auto;
+    bottom: 0;
+    left: 40px;
+    transform: perspective(0px) rotateY(0deg);
+    opacity: 1;
+    transition: all 900ms ease;
+}
+
+
+/* ==========================================================================
+                                   FRAME - 6
+   ========================================================================== */ 
+.frame-6 h2 {
+    margin: 0;
+    padding: 82px 0 42px 0;
+    font: 500 24px/30px 'Fira Sans', sans-serif;    
+}
+.frame-6 .parnters {
+   display: block;
+}
+.frame-6 .parnters li {
+    display: block;
+    height: 134px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 50%!important;
+    padding: 0!important;
+}
+.frame-6 .parnters li .middle {
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+.frame-6 .parnters li img {
+   transform: scale(0.85);
+   vertical-align: middle;
+   max-width: 144px;
+}
+
+/* ==========================================================================
+                                   FRAME - 7
+   ========================================================================== */ 
+   .frame-7 {
+    height: 80px;
+    background: url(../img/frame_07_bg.svg) no-repeat center top / auto 100%;
+    position: relative;
+    padding-top: 0px;
+}
+.frame-7::before {    
+    background: url(../img/frame_07_Chart.svg) no-repeat center top / auto 100%;
+    width: 100vw;
+    height: 100%;    
+}
+.frame-7 .wrapper h2,
+.frame-7 .wrapper .timer {
+   display: none;
+}
+
+/* ==========================================================================
+                                   FRAME - 8
+   ========================================================================== */ 
+.frame-8 {
+    height: auto;    
+    margin-top: -30px;
+    padding-top: 30px;
+}
+.frame-8 .frame-8_text {
+    width: auto;
+    float: none;
+    font: 300 16px/24px 'Fira Sans', sans-serif;    
+    padding-top: 60px;
+    transition: all 800ms ease 300ms;    
+    text-align: center;
+    margin-bottom: 40px;
+}
+.frame-8 .frame-8_text h2 {
+    font: 500 24px/30px 'Fira Sans', sans-serif;    
+    margin: 0 0 19px 0;
+    padding: 0;
+}
+.frame-8 .form {
+    width: auto;
+    height: auto;    
+    border-radius: 16px;
+    margin: 0;
+    box-shadow: 0 5px 45px 0 rgba(140, 173, 208, 0.45);
+    padding: 50px 18px;
+    opacity: 0;
+    transform: translate3d(0, 0px, 0);
+    transition: transform 1000ms ease, opacity 700ms linear 500ms;
+    margin-bottom: 112px;
+}
+.frame-8 .form .input-block {
+   margin-bottom: 10px;
+}
+.frame-8 .form .input-block label {
+    font: 300 14px/1 'Fira Sans', sans-serif;    
+    margin-bottom: 8px;
+}
+.frame-8 .form .input-block input {    
+    height: 40px;    
+    font: 17px/40px 'Fira Sans', sans-serif;    
+}
+
+
+/* ==========================================================================
+                                   FOOTER
+   ========================================================================== */ 
+   footer {
+    height: auto;    
+    padding: 50px 0 80px 0;
+}
+footer .wrapper .right {
+    float: none;
+    overflow: hidden;
+    margin-bottom: 65px;
+    text-align: center;
+}
+footer .wrapper .right a {
+   float: none!important;
+   display: inline-block!important;
+}
+footer .wrapper .right a:first-child {
+   margin: 0;
+}
+footer .wrapper .left {
+    width: auto;
+    float: none;
+    text-align: center;
+    padding-top: 56px;
+    font: 300 22px/36px 'Fira Sans', sans-serif;    
+    background: url(../img/header-logo.png) no-repeat center top / 180px auto;
+}
+.frame-5 .popup,
+.frame-8 .popup {
+    width: 100%;
+    height: 100%;    
+    border-radius: 0;    
+    z-index: 3;
+    position: fixed;
+    display: none;
+    margin-top:0;
+    top: 0;
+    left: 0;
+}
+.frame-5 .popup h2,
+.frame-8 .popup h2 {
+    padding: 0 20px;
+    margin: 0 auto 40px auto;
+    font: 600 26px/30px 'Fira Sans', sans-serif;    
+    width: auto;
+}
+.frame-5 .popup .message,
+.frame-8 .popup .message {
+    font: 300 20px/26px 'Fira Sans', sans-serif;
+    color: #000;
+    width: auto;
+    margin: auto;
+    padding: 0 20px;
+}
+.frame-5 .popup .close,
+.frame-8 .popup .close {    
+    top: 20px;
+    right: 20px;    
+    background: url(../img/popup-close-smart.png) no-repeat center;
+}
 
 /* ==========================================================================
                                    ANIMATIONS
@@ -461,4 +716,7 @@ footer {
 }
 .frame-1 .lines {    
     transition: width 1s ease 600ms;
+}
+.frame-4 .frame-4_animate {
+    transition: all 1000ms ease;
 }

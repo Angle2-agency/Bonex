@@ -50,11 +50,13 @@ $(document).ready(function() {
 	$('[data-click="how-it-works"]').click(function(){
 		var pos = $('.frame-3').offset().top;
 		$('html, body').animate({scrollTop:pos + 40}, 500);
+		if($('header').hasClass('show-nav'))$('header .nav_but').click();		
 		return false;
 	});
 	$('[data-click="benefits"]').click(function(){
 		var pos = $('.frame-4').offset().top;
 		$('html, body').animate({scrollTop:pos + 30}, 500);
+		if($('header').hasClass('show-nav'))$('header .nav_but').click();		
 		return false;
 	});
 	$('header .nav_but').click(function(e){
