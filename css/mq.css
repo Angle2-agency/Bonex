@@ -1,3 +1,258 @@
+@media screen and (max-width: 1190px) {
+.frame-4,
+.frame-5,
+.frame-6,
+.frame-7,
+.frame-8,
+footer {
+display: none; 
+}
+   .body-wrapper {
+      min-width: 1024px;
+   }
+   .wrapper {
+      width: 940px;
+      margin: auto;
+   }
+   .frame-1 {
+      height: 660px;
+      background: url(../img/frame_01_bg.svg) no-repeat center bottom / 2560px auto;
+   }
+   .frame-1 .marker-1 {
+      top: 426px;
+      left: 417px;
+      width: 14px;
+      height: 14px;
+   }
+   .frame-1 .marker-1::before, .frame-1 .marker-2::before {            
+      width: 30px;
+      height: 30px;                  
+      top: -7px;
+      left: -8px;      
+   }
+   .frame-1 .marker-1::after, .frame-1 .marker-2::after {      
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.1;
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      transform: scale(0);
+      transition: all 300ms linear 1600ms;
+   }
+   .frame-1 .marker-1 span, .frame-1 .marker-2 span {
+      font: 14px/1 'Fira Sans', sans-serif;      
+      left: -35px;
+      top: -27px;      
+   }
+   .frame-1 .marker-2 {
+      display: none;
+   }
+   .frame-1 .chart-1,
+   .frame-1 .chart-2,
+   .frame-1 .chart-3,
+   .frame-1 .setka,
+   .frame-1 .lines,
+   .frame-1 .lines .line-1,
+   .frame-1 .lines .line-2,
+   .frame-1 .lines .line-3 {
+      height: 660px;
+   }
+   .frame-1 .lines .line-1,
+   .frame-1 .lines .line-2,
+   .frame-1 .lines .line-3 {
+      background-position: center -336px;
+   }
+   .frame-1 .chart-1::after,
+   .frame-1 .chart-2::after,
+   .frame-1 .chart-3::after {
+      height: 660px;  
+      background-position: center -336px;
+   }
+   .frame-1_text-block {
+      width: 480px;
+      padding-top: 105px;
+   }
+   .frame-1_text-block h1 {    
+      font: bold 30px/36px 'Fira Sans', sans-serif;    
+   }
+   .frame-1_description {
+      width: 520px;
+      font: 300 20px/26px 'Fira Sans', sans-serif;   
+      margin: 10px 0 52px 0;   
+   }
+   .frame-1_phone {
+      width: 230px;
+      height: 476px;
+      position: absolute;
+      top: 75px;
+      right: 190px;
+      border-radius: 36px;
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translate3d(50px, 0, 0);
+      transition: all 300ms ease 2300ms;
+   }
+   .frame-1_phone::before {            
+      width: 230px;
+      height: 476px;
+      background: url(../img/bg-phone.png) no-repeat center center / 230px 476px;
+   }
+   .frame-1_phone::after {            
+      width: 195px;
+      height: 355px;      
+      top: 58px;
+      right: -195px;
+      background: url(../img/bg-phone-screen.png) no-repeat center center / 195px 355px;      
+   }
+   .frame-2_title-block {
+      width: 780px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 135px;
+   }
+   .frame-2_title-block h2 {
+      font: 700 36px/48px 'Fira Sans', sans-serif;
+      color: #000;
+      margin: 0;
+      padding: 100px 0 15px 0;
+   }
+   .frame-2_title-block_text {
+      font: 300 20px/26px 'Fira Sans', sans-serif;
+      color: #000;
+   }
+   .frame-2_description li {
+      width: 50%;
+      float: left;
+      position: relative;
+      padding-left: 160px;
+   }
+   .frame-2_description li h3 {
+      font: 500 30px/1 'Fira Sans', sans-serif;      
+      margin: 0 0 24px 0;
+   }
+   .frame-2_description_text {
+      font: 16px/22px 'Fira Sans', sans-serif;      
+   }
+   .frame-2_description_list {      
+      top: -38px;
+      left: 35px;
+      width: 105px;
+      height: 105px;
+   }
+   .frame-2_description_list::before {            
+      width: 90px;
+      height: 90px;      
+      top: 8px;
+      left: -6px;      
+   }
+   .frame-2_description_list::after {            
+      width: 134px;
+      height: 134px;      
+      top: -14px;
+      left: -27px;      
+   }
+   .frame-3 {
+      height: 735px;
+      background-size: auto 735px;
+   }
+   .frame-3 .chart-1 {
+      height: 735px;
+      background-size: auto 735px;
+   }
+   .frame-3.animate .chart-2,
+   .frame-3.animate .chart-3,
+   .frame-3.animate .chart-4 {
+      height: 735px;
+   }
+   .frame-3 .chart-2::before,
+   .frame-3 .chart-3::before,
+   .frame-3 .chart-4::before {
+      height: 735px;  
+      background-size: auto 735px;
+   }
+   .frame-3 .line {
+      height: 735px;  
+   }
+   .frame-3 .line::before {                  
+      height: 735px;
+      background: url(../img/frame_03_line.svg) no-repeat center bottom / auto 735px;      
+   }
+   .frame-3 .wrapper {
+      padding-top: 114px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+   }
+   .frame-3_title h2 {
+      margin: 0 0 1px 0;
+      padding: 0;
+      font: 500 36px/1 'Fira Sans', sans-serif;
+      color: #fff;
+   }
+   .frame-3_title-text {
+      font: 300 20px/48px 'Fira Sans', sans-serif;
+      color: #fff;
+      opacity: 0.9;
+   }
+   .frame-3 .frame-3_step .bobble {
+      width: 16px;
+      height: 16px;            
+      margin-bottom: 47px;      
+   }
+   .frame-3 .frame-3_step .bobble::before {      
+      width: 38px;
+      height: 38px;      
+      top: -11px;
+      left: -11px;
+   }
+   .frame-3 .frame-3_step .bobble::after {      
+      width: 90px;
+      height: 90px;      
+      top: -38px;
+      left: -38px;
+   }
+   .frame-3 .frame-3_step {      
+      width: 220px;
+   }
+   .frame-3 .frame-3_step .bobble_title {
+      font: 600 24px/1 'Fira Sans', sans-serif;      
+      margin-bottom: 54px;
+   }
+   .frame-3 .frame-3_step .bobble_title::before {      
+      font: 600 96px/1 'Fira Sans Extra Condensed', sans-serif;
+      margin-bottom: -62px;      
+   }
+   .frame-3 .frame-3_step .bobble_description {
+      font: 300 16px/20px 'Fira Sans', sans-serif;      
+      margin-bottom: 22px;
+   }
+
+
+   .frame-3 .frame-3_step.step-1 {
+      top: 390px;
+      left: -2px;
+   }
+   .frame-3 .frame-3_step.step-2 {
+      top: 362px;
+      left: 224px;
+   }
+   .frame-3 .frame-3_step.step-3 {
+      top: 316px;
+      left: 480px;
+   }
+   .frame-3 .frame-3_step.step-4 {
+      top: 244px;
+      left: 719px;
+   }
+
+
+
+
+}
+
 @media screen and (max-width: 720px) {
    .body-wrapper {
       min-width: 320px;
@@ -720,3 +975,30 @@ footer .wrapper .left {
 .frame-4 .frame-4_animate {
     transition: all 1000ms ease;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+   
+}
+
