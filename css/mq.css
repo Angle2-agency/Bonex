@@ -1,12 +1,4 @@
 @media screen and (max-width: 1190px) {
-.frame-4,
-.frame-5,
-.frame-6,
-.frame-7,
-.frame-8,
-footer {
-display: none; 
-}
    .body-wrapper {
       min-width: 1024px;
    }
@@ -14,6 +6,7 @@ display: none;
       width: 940px;
       margin: auto;
    }
+    /* ================================ FRAME - 1 ========================================*/   
    .frame-1 {
       height: 660px;
       background: url(../img/frame_01_bg.svg) no-repeat center bottom / 2560px auto;
@@ -107,6 +100,9 @@ display: none;
       right: -195px;
       background: url(../img/bg-phone-screen.png) no-repeat center center / 195px 355px;      
    }
+
+   /* ================================ FRAME - 2 ========================================*/   
+
    .frame-2_title-block {
       width: 780px;
       margin: auto;
@@ -154,6 +150,9 @@ display: none;
       top: -14px;
       left: -27px;      
    }
+
+   /* ================================ FRAME - 3 ========================================*/   
+
    .frame-3 {
       height: 735px;
       background-size: auto 735px;
@@ -229,8 +228,6 @@ display: none;
       font: 300 16px/20px 'Fira Sans', sans-serif;      
       margin-bottom: 22px;
    }
-
-
    .frame-3 .frame-3_step.step-1 {
       top: 390px;
       left: -2px;
@@ -248,12 +245,220 @@ display: none;
       left: 719px;
    }
 
+   /* ================================ FRAME - 4 ========================================*/   
+
+   .frame-4 {
+      height: 830px;
+      overflow: hidden;
+   }
+   .frame-4 .frame-4_title {
+      margin: 111px 0 56px 0;      
+      width: 560px;
+      font: 500 36px/46px 'Fira Sans', sans-serif;      
+   }
+   .frame-4 .frame-4_list {            
+      width: 540px;
+   }
+   .frame-4 .frame-4_list li {
+      font: 400 16px/22px 'Fira Sans', sans-serif;      
+      padding-left: 79px;
+      padding-top: 3px;
+      position: relative;
+      margin-bottom: 54px;
+   }
+   .frame-4 .wrapper .bg {
+      width: 650px;
+      height: 650px;
+      background: url(../img/bg-frame-4.png) no-repeat center / 100% 100%;      
+      top: -20px;
+      left: 358px;            
+   }
+
+
+   /* ================================ FRAME - 5 ========================================*/
+
+   .frame-5 .frame-5_form-block {
+      height: 1025px;
+      background: url(../img/frame_05_bg.svg) no-repeat center top / 2560px auto;      
+   }
+   .frame-5 .frame-5_text {
+      margin: 83px 0 0 0;
+      background: url(../img/frame_05_icon_1.svg) no-repeat -11px -19px / 108px auto;
+      height: 450px;
+      font: 300 30px/36px 'Fira Sans', sans-serif;      
+      padding-top: 100px;      
+      width: 380px;
+   }
+   .frame-5 .frame-5_form-block .form {
+      width: 540px;
+      height: 710px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 5px 55px 0 #2d73d7;
+      padding: 0 81px;
+      opacity: 0;
+      transform: scale(1);
+      transition: transform 1000ms ease, opacity 1500ms linear;
+   }
+   .frame-5 .frame-5_form-block .form h2 {
+      padding: 57px 0 40px 0;      
+   }
+   .frame-5 .frame-5_form-block .form .input-block input {      
+      height: 46px;      
+      font: 20px/46px 'Fira Sans', sans-serif;      
+   }
+   .frame-5 .frame-5_form-block .form .input-block {
+      margin-bottom: 28px;
+   }
+   .frame-5 .form .submit {      
+      padding-top: 15px;
+   }
+   .frame-5 .form .submit button {      
+      padding: 0 40px;      
+   }
+   .frame-5 .frame-5_mac-block {
+      height: 785px;      
+   }   
+   .frame-5 .frame-5_mac-block .wrapper .macbook {
+      width: 1020px;
+      height: 600px;      
+      background: url(../img/bg-macbook.png) no-repeat center center / 1020px 600px;
+      top: 77px;
+      left: 300px;
+      transition: all 1000ms ease;
+   }
+   .frame-5 .frame-5_mac-block .frame-5_lines {      
+      height: 720px;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      transition: all 2300ms ease;
+   }
+   .frame-5 .frame-5_mac-block .wrapper .mac-text {
+      width: 400px;
+      padding-top: 195px;
+      background: url(../img/frame_05_icon_2.svg) no-repeat -16px 102px / 73px auto;
+      font: 300 30px/40px 'Fira Sans', sans-serif;      
+   }
+   .frame-5 .frame-5_mac-block .frame-5_lines::before {      
+      background: url(../img/frame_05_lines.svg) no-repeat center bottom / auto 660px;
+      width: 100vw;
+      height: 730px;      
+   }
+
+   /* ================================ FRAME - 6 ========================================*/
+
+   .frame-6 h2 {      
+      padding: 82px 0 57px 0;
+      font: 500 30px/1 'Fira Sans', sans-serif;      
+   }
+   .frame-6 .parnters li:nth-child(odd) {
+      width: 250px;
+      padding-right: 18px;
+      box-sizing: content-box;
+   }
+
+/* ================================ FRAME - 7 ========================================*/
+
+   .frame-7 {
+      height: 400px;
+      background: url(../img/frame_07_bg.svg) no-repeat center top / 2150px auto;
+      position: relative;
+      padding-top: 90px;
+   }
+   .frame-7::before {
+      content: "";
+      background: url(../img/frame_07_Chart.svg) no-repeat center top / 2150px auto;
+      width: 100vw;
+      height: 472px;
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+   .frame-7 .wrapper h2 {
+      font: 500 30px/1 'Fira Sans', sans-serif;    
+      margin: 0 0 27px 0;    
+   }
+   .flip-clock-wrapper ul {            
+      margin: 5px 10px;
+      width: 80px;
+      height: 134px;
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 87px;
+      border-radius: 14px;
+      background: #8ac3fd;
+   }
+   .flip-clock-wrapper ul li a div div.inn {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 200%;
+      color: #fff;      
+      font: 600 107px/134px 'Fira Sans', sans-serif;
+   }
+   .flip-clock-divider {
+      float: left;
+      display: inline-block;
+      position: relative;
+      width: 41px;
+      height: 150px;
+   }
+   .flip-clock-dot {            
+      width: 10px;
+      height: 10px;      
+      left: 17px;
+   }
+   .flip-clock-dot.top {
+      top: 50px;
+   }
+   .flip-clock-divider .flip-clock-label {      
+      top: 150px;
+      right: -148px;      
+      font: 500 24px/1 'Fira Sans', sans-serif;      
+   }
+   .flip-clock-divider.days .flip-clock-label {
+      right: -130px;
+   }
+
+/* ================================ FRAME - 8 ========================================*/
+
+   .frame-8 {
+      height: 734px;      
+      margin-top: -73px;
+      padding-top: 73px;
+   }
+   .frame-8 .frame-8_text {
+      width: 380px;            
+      padding-top: 170px;      
+   }
+   .frame-8 .frame-8_text h2 {
+      font: 500 30px/36px 'Fira Sans', sans-serif;      
+      margin: 0 0 19px 0;
+      padding: 0;
+   }
+   .frame-8 .form {
+      width: 540px;
+      height: 395px;            
+      margin: 0 0 0 400px;      
+      padding: 55px 74px;      
+   }
+   .frame-8 .form .input-block input {      
+      height: 45px;            
+      font: 20px/45px 'Fira Sans', sans-serif;      
+   }
+   .frame-8 .form .submit button {      
+      padding: 0 46px;      
+   }
+
+
 
 
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1040px) {
    .body-wrapper {
       min-width: 320px;
    }
