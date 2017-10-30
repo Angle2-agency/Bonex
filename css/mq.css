@@ -345,6 +345,25 @@
       width: 100vw;
       height: 730px;      
    }
+   .frame-5 .popup {      
+      height: 705px;      
+   }
+   .frame-5 .popup h2 {      
+      margin: 0 auto 20px auto;
+      font: 600 48px/60px 'Fira Sans', sans-serif;
+      color: #4a94e3;
+      width: 660px;
+   }
+   .frame-5 .popup .message {
+      font: 300 30px/40px 'Fira Sans', sans-serif;
+      color: #000;
+      width: 780px;
+      margin: auto;
+   }
+   .frame-5 .popup .close {            
+      top: 30px;
+      right: 30px;      
+   }
 
    /* ================================ FRAME - 6 ========================================*/
 
@@ -450,6 +469,18 @@
    }
    .frame-8 .form .submit button {      
       padding: 0 46px;      
+   }
+   .frame-8 .popup {      
+      height: 390px;
+      margin-top: 110px;
+   }
+   .frame-8 .popup h2 {    
+      margin: 10px auto 13px auto;
+      font: 600 48px/60px 'Fira Sans', sans-serif;    
+   }
+   .frame-8 .popup .close {      
+      top: 30px;
+      right: 30px;      
    }
 
 
