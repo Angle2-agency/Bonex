@@ -305,10 +305,20 @@
    }
    .frame-5 .frame-5_form-block .form .input-block input {      
       height: 46px;      
-      font: 20px/46px 'Fira Sans', sans-serif;      
+      font: 20px/46px 'Fira Sans', sans-serif;
+   }
+   .frame-5 .frame-5_form-block .form .input-block label.input-block_label {
+      font: 20px/14px 'Fira Sans', sans-serif;
+   }
+   .frame-5 .frame-5_form-block .form .input-block.focus label.input-block_label {
+      font: 300 14px/14px 'Fira Sans', sans-serif;      
    }
    .frame-5 .frame-5_form-block .form .input-block {
       margin-bottom: 28px;
+   }
+   .frame-5 .frame-5_form-block .form .input-block i {
+      left: auto;
+      right: 0;
    }
    .frame-5 .form .submit {      
       padding-top: 15px;
@@ -469,9 +479,19 @@
       margin: 0 0 0 400px;      
       padding: 55px 74px;      
    }
+   .frame-8 .form .input-block label {      
+      font: 20px/17px 'Fira Sans', sans-serif;      
+   }
+   .frame-8 .form .input-block.focus label {
+      font: 300 17px/17px 'Fira Sans', sans-serif;
+   }
    .frame-8 .form .input-block input {      
       height: 45px;            
       font: 20px/45px 'Fira Sans', sans-serif;      
+   }
+   .frame-8 .form .input-block i {
+      left: auto;
+      right: 0;
    }
    .frame-8 .form .submit button {      
       padding: 0 46px;      
@@ -968,13 +988,18 @@
 .frame-5 .frame-5_form-block .form .input-block {
    margin-bottom: 10px;
 }
-.frame-5 .frame-5_form-block .form .input-block label {
-    font: 300 14px/1 'Fira Sans', sans-serif;    
-    margin-bottom: 8px;
+.frame-5 .frame-5_form-block .form .input-block label.input-block_label {
+   font: 17px/14px 'Fira Sans', sans-serif!important;
+    margin-bottom: 8px!important;
+    transform: translate3d(0, 38px, 0);
+}
+.frame-5 .frame-5_form-block .form .input-block.focus label.input-block_label {   
+    font: 300 14px/14px 'Fira Sans', sans-serif!important;    
+    margin-bottom: 8px!important;
 }
 .frame-5 .frame-5_form-block .form .input-block input {    
     height: 40px;    
-    font: 17px/40px 'Fira Sans', sans-serif;    
+    font: 17px/40px 'Fira Sans', sans-serif;
 }
 [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
     position: relative;
@@ -1123,9 +1148,13 @@
 .frame-8 .form .input-block {
    margin-bottom: 10px;
 }
-.frame-8 .form .input-block label {
-    font: 300 14px/1 'Fira Sans', sans-serif;    
-    margin-bottom: 8px;
+
+.frame-8 .form .input-block label {    
+    font: 17px/14px 'Fira Sans', sans-serif;    
+    transform: translate3d(0, 38px, 0);
+}
+.frame-8 .form .input-block.focus label {    
+    font: 300 14px/14px 'Fira Sans', sans-serif;  
 }
 .frame-8 .form .input-block input {    
     height: 40px;    

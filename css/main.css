@@ -20,6 +20,7 @@ html {
 }
 body {
     background-color: #fff;
+    padding-top: 107px;
 }
 
 a {
@@ -62,7 +63,12 @@ a:hover {
 
 header {
   background-color: #69b0f7;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 header .wrapper {  
   height: 107px;  
@@ -70,13 +76,13 @@ header .wrapper {
 .header_logo {
   width: 181px;
   float: left;
-  margin-top: 39px;
+  margin-top: 37px;
   z-index: 2;
   position: relative;
 }
 .header_logo img {
   width: 181px;
-  height: 34px;
+  height: auto;
 }
 header nav {
   float: right;
@@ -92,7 +98,7 @@ header nav .header_menu li {
   float: left;
   margin-right: 40px;
   height: 107px;
-  padding-top: 50px;
+  padding-top: 47px;
   cursor: pointer;
 }
 header nav .header_menu li:last-child {
@@ -151,7 +157,7 @@ header .header_reg {
   height: 54px;
   border: 3px solid #fff;
   text-align: center;
-  font: 17px/52px 'Fira Sans', sans-serif;
+  font: 17px/48px 'Fira Sans', sans-serif;
   float: left;
   margin-top: 29px;
   color: #fff;
@@ -390,6 +396,9 @@ header .header_reg {
     right: 0;
     z-index: 2;
 }
+.en .frame-1_phone::before {    
+    background:url('../img/bg-phone-en.png') no-repeat center center;    
+}
 .frame-1_phone::after {
     content: "";
     display: block;
@@ -403,6 +412,9 @@ header .header_reg {
     transform: translate3d(-100%, 0, 0);
     z-index: 1;    
     transition: all 250ms ease 2800ms;
+}
+.en .frame-1_phone::after {    
+    background:url('../img/bg-phone-screen-en.png') no-repeat center center;    
 }
 .frame-2 {
     padding-bottom: 62px;
@@ -1017,12 +1029,32 @@ header .header_reg {
 }
 .frame-5 .frame-5_form-block .form .input-block {
   margin-bottom: 31px;
+  position: relative;
 }
-.frame-5 .frame-5_form-block .form .input-block label {
-  font: 300 17px/1 'Fira Sans', sans-serif;
+.frame-5 .frame-5_form-block .form .input-block i {
+    display: block;
+    font: 12px/1 'Fira Sans', sans-serif;
+    color: #b20202;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    display: none;
+
+}
+.frame-5 .frame-5_form-block .form .input-block.error i {
+    display: block;
+}
+.frame-5 .frame-5_form-block .form .input-block label.input-block_label {  
+  font: 20px/17px 'Fira Sans', sans-serif;
   color: #93939d;
   display: block;
   margin-bottom: 10px;
+  transform: translate3d(0, 43px, 0);
+  transition: all 200ms ease;  
+}
+.frame-5 .frame-5_form-block .form .input-block.focus label.input-block_label {
+  font: 300 17px/17px 'Fira Sans', sans-serif;
+  transform: translate3d(0, 0, 0);
 }
 .frame-5 .frame-5_form-block .form .input-block input {
   width: 100%;
@@ -1032,24 +1064,24 @@ header .header_reg {
   border-bottom: 1px solid #c7c7d1;
   font: 20px/50px 'Fira Sans', sans-serif;
   outline: none;
-  transition: all 400ms ease;
+  transition: all 200ms ease;
+  position: relative;
+  z-index: 5;
 }
 .form .input-block.error input {
   border-bottom: 1px solid #b20202!important;
 }
-.input-block.error label {  
+.input-block.error label,
+.input-block.error input {  
   color: #b20202!important;  
 }
-.frame-5 .frame-5_form-block .form .input-block input:focus {
+.frame-5 .frame-5_form-block .form .input-block.focus input {
   border-bottom: 1px solid #000;
-}
-.frame-5 .frame-5_form-block .form .frame-5_checkbox {
-  padding-top: 7px;
 }
 /* Base for label styling */
 .frame-5_checkbox [type="checkbox"]:not(:checked),
 .frame-5_checkbox [type="checkbox"]:checked {
-  position: absolute;
+  position: absolute!important;
   left: -9999px;
 }
 [type="checkbox"]:not(:checked) + label,
@@ -1177,6 +1209,9 @@ header .header_reg {
   transform: perspective(900px) rotateY(10deg);
   opacity: 0;
   transition: all 1400ms ease;
+}
+.en .frame-5 .frame-5_mac-block .wrapper .macbook {  
+  background:url('../img/bg-macbook-en.png') no-repeat center center;
 }
 .frame-5 .frame-5_mac-block .wrapper .mac-text {
   width: 400px;
@@ -1355,7 +1390,7 @@ header .header_reg {
 .frame-8.submit .form {
     display: none;
 }
-.frame-8 .frame-8_text a {
+.frame-8 .frame-8_text span {
     color: #4791dc;
     font-weight: 600;
     text-decoration: none;
@@ -1381,12 +1416,30 @@ header .header_reg {
 }
 .frame-8 .form .input-block {
   margin-bottom: 31px;
+  position: relative;
+}
+.frame-8 .form .input-block i {
+    font: 12px/1 'Fira Sans', sans-serif;
+    color: #b20202;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    display: none;
+}
+.frame-8 .form .input-block.error i {
+    display: block;
 }
 .frame-8 .form .input-block label {
-  font: 300 17px/1 'Fira Sans', sans-serif;
-  color: #93939d;
-  display: block;
-  margin-bottom: 10px;
+    font: 20px/17px 'Fira Sans', sans-serif;
+    color: #93939d;
+    display: block;
+    margin-bottom: 10px;
+    transform: translate3d(0, 43px, 0);
+    transition: all 200ms ease;
+}
+.frame-8 .form .input-block.focus label {
+    font: 300 17px/17px 'Fira Sans', sans-serif;
+    transform: translate3d(0, 0, 0);
 }
 .frame-8 .form .input-block input {
   width: 100%;
@@ -1396,7 +1449,9 @@ header .header_reg {
   border-bottom: 1px solid #c7c7d1;
   font: 20px/50px 'Fira Sans', sans-serif;
   outline: none;
-  transition: all 400ms ease;
+  transition: all 200ms ease;
+  position: relative;
+  z-index: 5;
 }
 .frame-8 .form .input-block input:focus {
   border-bottom: 1px solid #000;
@@ -1466,6 +1521,6 @@ footer .wrapper .right .fb {
     height: 34px;
     display: block;
     float: right;
-    background: url(../img/footer-fb.png) no-repeat 0 0;
+    background: url(../img/footer-fb.svg) no-repeat 0 0 / cover;
     margin-left: 28px;
 }

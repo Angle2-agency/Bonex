@@ -1,7 +1,7 @@
 var clock;
 $(document).ready(function() {	
 	setTimeout(function(){		
-		$(document).scrollTop(0);
+		//$(document).scrollTop(0);
 		frameStarts.init();
 		scroller();
 	}, 50);	
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	// Instantiate a coutdown FlipClock
 	clock = $('#timer').FlipClock(startTime, {
 		clockFace: 'DailyCounter',
-		language : 'ru',
+		language : $('body').hasClass('en') ? 'en' : 'ru',
 		showSeconds: false,
 		countdown : true,
 		enabletranslate3d: true
@@ -44,18 +44,24 @@ $(document).ready(function() {
 
 	$('[data-click="registration"]').click(function(){
 		var pos = $('.frame-5_form-block .form').offset().top;
-		$('html, body').animate({scrollTop:pos - 40}, 500);
+		$('html, body').animate({scrollTop:pos - 120}, 500);
+		return false;
+	});
+	$('[data-click="about"]').click(function(){
+		var pos = 0;
+		$('html, body').animate({scrollTop:pos}, 500);
+		if($('header').hasClass('show-nav'))$('header .nav_but').click();		
 		return false;
 	});
 	$('[data-click="how-it-works"]').click(function(){
 		var pos = $('.frame-3').offset().top;
-		$('html, body').animate({scrollTop:pos + 40}, 500);
+		$('html, body').animate({scrollTop:pos}, 500);
 		if($('header').hasClass('show-nav'))$('header .nav_but').click();		
 		return false;
 	});
 	$('[data-click="benefits"]').click(function(){
 		var pos = $('.frame-4').offset().top;
-		$('html, body').animate({scrollTop:pos + 30}, 500);
+		$('html, body').animate({scrollTop:pos}, 500);
 		if($('header').hasClass('show-nav'))$('header .nav_but').click();		
 		return false;
 	});
@@ -110,6 +116,16 @@ $(document).ready(function() {
 		  	
 		});		
 		return false;
+	});
+	$('#frame-5-form input, #frame-8-form input').focus(function(e) {
+		if(!$(this).val().trim().length){
+			$(this).closest('.input-block').addClass('focus');	
+		}		
+	});
+	$('#frame-5-form input, #frame-8-form input').blur(function(e) {
+		if(!$(this).val().trim().length){
+			$(this).closest('.input-block').removeClass('focus');	
+		}		
 	});
 	$('#frame-8-form').submit(function(e){
 		$.ajax({
