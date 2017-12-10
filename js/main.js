@@ -1,7 +1,7 @@
 var clock;
 $(document).ready(function() {	
 	setTimeout(function(){		
-		//$(document).scrollTop(0);
+		$(document).scrollTop(0);
 		frameStarts.init();
 		scroller();
 	}, 50);	
