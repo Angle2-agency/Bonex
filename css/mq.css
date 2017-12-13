@@ -307,6 +307,9 @@
       height: 46px;      
       font: 20px/46px 'Fira Sans', sans-serif;
    }
+   .form .input-block .input-clear {    
+       bottom: 15px;       
+   }
    .frame-5 .frame-5_form-block .form .input-block label.input-block_label {
       font: 20px/14px 'Fira Sans', sans-serif;
    }
@@ -488,11 +491,7 @@
    .frame-8 .form .input-block input {      
       height: 45px;            
       font: 20px/45px 'Fira Sans', sans-serif;      
-   }
-   .frame-8 .form .input-block i {
-      left: auto;
-      right: 0;
-   }
+   }   
    .frame-8 .form .submit button {      
       padding: 0 46px;      
    }
@@ -527,6 +526,9 @@
 /* ==========================================================================
                                    HEADER 
    ========================================================================== */   
+   body {
+      padding-top: 54px;
+   }
    header .wrapper {
       height: 54px;
    }
@@ -1000,6 +1002,9 @@
 .frame-5 .frame-5_form-block .form .input-block input {    
     height: 40px;    
     font: 17px/40px 'Fira Sans', sans-serif;
+}
+.form .input-block .input-clear {    
+    bottom: 12px;    
 }
 [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
     position: relative;

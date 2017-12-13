@@ -396,8 +396,8 @@ header .header_reg {
     right: 0;
     z-index: 2;
 }
-.en .frame-1_phone::before {    
-    background:url('../img/bg-phone-en.png') no-repeat center center;    
+.en .frame-1_phone::before {
+    background-image: url('../img/bg-phone-en.png');
 }
 .frame-1_phone::after {
     content: "";
@@ -414,7 +414,7 @@ header .header_reg {
     transition: all 250ms ease 2800ms;
 }
 .en .frame-1_phone::after {    
-    background:url('../img/bg-phone-screen-en.png') no-repeat center center;    
+    background-image: url('../img/bg-phone-screen-en.png');
 }
 .frame-2 {
     padding-bottom: 62px;
@@ -1031,25 +1031,38 @@ header .header_reg {
   margin-bottom: 31px;
   position: relative;
 }
-.frame-5 .frame-5_form-block .form .input-block i {
-    display: block;
+.form .input-block i {    
     font: 12px/1 'Fira Sans', sans-serif;
     color: #b20202;
     position: absolute;
     left: 0;
     bottom: -15px;
     display: none;
+    width: 100%;
+    text-align: center;
 
 }
-.frame-5 .frame-5_form-block .form .input-block.error i {
+.form .input-block .input-clear {
+    width: 16px;
+    height: 16px;
+    background: url('../img/input-clear-icon.png') no-repeat center / cover;
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    z-index: 6;
+    cursor: pointer;
+    display: none;
+}
+.frame-5 .frame-5_form-block .form .input-block.error i, 
+.form .input-block.error .input-clear {
     display: block;
 }
 .frame-5 .frame-5_form-block .form .input-block label.input-block_label {  
   font: 20px/17px 'Fira Sans', sans-serif;
   color: #93939d;
   display: block;
-  margin-bottom: 10px;
-  transform: translate3d(0, 43px, 0);
+  margin-bottom: 5px;
+  transform: translate3d(0, 39px, 0);
   transition: all 200ms ease;  
 }
 .frame-5 .frame-5_form-block .form .input-block.focus label.input-block_label {
@@ -1211,7 +1224,7 @@ header .header_reg {
   transition: all 1400ms ease;
 }
 .en .frame-5 .frame-5_mac-block .wrapper .macbook {  
-  background:url('../img/bg-macbook-en.png') no-repeat center center;
+  background-image: url('../img/bg-macbook-en.png');
 }
 .frame-5 .frame-5_mac-block .wrapper .mac-text {
   width: 400px;
@@ -1417,14 +1430,6 @@ header .header_reg {
 .frame-8 .form .input-block {
   margin-bottom: 31px;
   position: relative;
-}
-.frame-8 .form .input-block i {
-    font: 12px/1 'Fira Sans', sans-serif;
-    color: #b20202;
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    display: none;
 }
 .frame-8 .form .input-block.error i {
     display: block;

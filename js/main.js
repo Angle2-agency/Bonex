@@ -1,7 +1,7 @@
 var clock;
 $(document).ready(function() {	
 	setTimeout(function(){		
-		$(document).scrollTop(0);
+		//$(document).scrollTop(0);
 		frameStarts.init();
 		scroller();
 	}, 50);	
@@ -78,6 +78,9 @@ $(document).ready(function() {
 		}
 	})
 
+	$('.input-block .input-clear').click(function(e) {
+		$(this).closest('.input-block').removeClass('error').find('input').val('').focus();
+	});
 	$('#frame-5-form').submit(function(e){
 		$.ajax({
 		  type: "POST",
